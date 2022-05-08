@@ -15,9 +15,8 @@
 
 ### add some nerdfonts & fix bengali font issue on linux
 - clone the repo
-- move the .fonts folder to home directory
-    - run `cd linux-dots; mv .fonts ~/.fonts; fc-cache -fv;`
-    - then `reboot`
+- run `cd linux-dots; mkdir -p ~/.fonts; mv .fonts ~/.fonts; fc-cache -fv;`
+- then `reboot`
 ---
 
 ## install the rofi theme 
