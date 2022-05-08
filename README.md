@@ -33,14 +33,17 @@
 - on pop_os: `sudo apt install flatpak; flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;`
 - for more check : https://flatpak.org/setup/
 
-### must have flatpak apps
+### must needed apps
 
 `flatpak install flathub net.agalwood.Motrix -y;
 flatpak install flathub io.gitlab.librewolf-community -y;
 flatpak install flathub org.videolan.VLC -y;
 flatpak install flathub org.telegram.desktop -y;
-flatpak install flathub com.mattjakeman.ExtensionManager -y;
-flatpak install flathub org.gnome.TextEditor -y;
+flatpak install flathub org.gnome.TextEditor -y;`
+
+### optional
+
+`flatpak install flathub com.mattjakeman.ExtensionManager -y;
 flatpak install flathub org.librehunt.Organizer -y;
 flatpak install flathub org.gnome.BreakTimer-y;
 flatpak install flathub com.github.jeromerobert.pdfarranger -y;`
