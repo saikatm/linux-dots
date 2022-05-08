@@ -4,10 +4,10 @@
 
 ## Install the Apps 
 ### FOR DEBIAN BASED DISTROS
-- `sudo apt install kitty rofi`
+- `sudo apt install kitty rofi papirus-icon-theme gparted preload -y`
 
 ### FOR ARCH BASED DISTROS
-- `sudo pacman -S kitty rofi`
+- `sudo pacman -S kitty rofi papirus-icon-theme gparted preload -y`
 
 
 ## fonts and dotfiles for my linux machine.
