@@ -24,7 +24,7 @@
 - clone the repo
 - make folders `mkdir -p ~/.config/rofi ~/.local/share/rofi/themes`
 - then `cd .config/rofi; cp -r config.rasi ~/.config/rofi/`
-- copy the files `cp -r .config/rofi/catppuccin.rofi ~/.local/share/rofi/themes/`
+- copy the files `cp -r catppuccin.rasi ~/.local/share/rofi/themes/`
 - run in terminal `rofi -show drun`
 ### another style for rofi
 - rename the files `mv config.rasi config.rasi.bak`; `mv config.rasi.alt config.rasi`
