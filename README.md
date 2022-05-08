@@ -2,9 +2,9 @@
 
 ## Install the Apps 
 ### on debian based distros
-- `sudo apt install kitty rofi papirus-icon-theme gparted preload -y`
+- `sudo apt install kitty rofi papirus-icon-theme gparted preload neofetch htop -y`
 ### for arch linux based distors
-- `sudo pacman -S kitty rofi papirus-icon-theme gparted -y`
+- `sudo pacman -S kitty rofi papirus-icon-theme gparted neofetch htop -y`
 - `pikaur -S preload`
 ---
 
@@ -13,7 +13,7 @@
 - .fonts - contains some custom fonts.
 ---
 
-### fix bengali font issue on linux
+### add some nerdfonts & fix bengali font issue on linux
 - clone the repo
 - move the .fonts folder to home directory
     - run `cd linux-dots; mv .fonts ~/.fonts; fc-cache -fv;`
@@ -27,7 +27,7 @@
 - copy the files `cp -r catppuccin.rasi ~/.local/share/rofi/themes/`
 - run in terminal `rofi -show drun`
 ### another style for rofi
-- rename the files `mv config.rasi config.rasi.bak`; `mv config.rasi.alt config.rasi`
+- rename the files `mv config.rasi config.rasi.bak; mv config.rasi.alt config.rasi`
 - run in terminal `rofi -combi-modi window,drun,run -show combi`
 ---
 
