@@ -26,6 +26,7 @@
 - copy the files `cp -r catppuccin.rasi ~/.local/share/rofi/themes/`
 - run in terminal `rofi -show drun`
 ### another style for rofi
+- `cd ~/.config/rofi/`
 - rename the files `mv config.rasi config.rasi.bak; mv config.rasi.alt config.rasi`
 - run in terminal `rofi -combi-modi window,drun,run -show combi`
 ---
