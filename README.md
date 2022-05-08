@@ -33,7 +33,8 @@
 
 ## install kitty theme 
 - clone the repo then cd `linux-dots`
-- create folder `mkdir -p ~/.config/kiity; cp -r .config/kitt/* ~/.config/kitty
+- create folder `mkdir -p ~/.config/kitty`
+- copy the files `cp -r .config/kitty/. ~/.config/kitty`
 
 ### Install Flatpak
 - on arch based: `sudo pacman -S flatpak;` then `reboot`
