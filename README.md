@@ -26,3 +26,9 @@
     - `cd linux-dots; mv .fonts ~/.fonts; fc-cache -fv;`
     - then `reboot`
 
+## SCREENSHOTS
+
+### KITTY TERMINAL THEME
+<p align="center">
+  <img src="kitty.png" style="border-radius:2%"/>
+</p>
