@@ -65,3 +65,8 @@ flatpak install flathub com.github.jeromerobert.pdfarranger -y;`
 <p align="center">
   <img src="rofi.png" style="border-radius:2%"/>
 </p>
+
+
+
+# forever grateful to linux 💝
+
