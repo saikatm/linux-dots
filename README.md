@@ -7,7 +7,8 @@
 - `sudo apt install kitty rofi papirus-icon-theme gparted preload -y`
 
 ### FOR ARCH BASED DISTROS
-- `sudo pacman -S kitty rofi papirus-icon-theme gparted preload -y`
+- `sudo pacman -S kitty rofi papirus-icon-theme gparted -y`
+- `pikaur -S preload`
 
 
 ## fonts and dotfiles for my linux machine.
