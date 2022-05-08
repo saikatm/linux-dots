@@ -48,7 +48,7 @@
 flatpak install flathub io.gitlab.librewolf-community -y;
 flatpak install flathub org.videolan.VLC -y;
 flatpak install flathub org.telegram.desktop -y;
-flatpak install flathub org.gnome.TextEditor -y;`
+flatpak install flathub org.gnome.TextEditor -y;
 flatpak install flathub com.github.jeromerobert.pdfarranger -y;`
 
 ### optional apps
@@ -58,10 +58,10 @@ flatpak install flathub com.github.jeromerobert.pdfarranger -y;`
 
 `flatpak install flathub com.mattjakeman.ExtensionManager -y;
 flatpak install flathub org.librehunt.Organizer -y;
-flatpak install flathub org.gnome.BreakTimer-y;
+flatpak install flathub org.gnome.BreakTimer-y;`
 
 ### remove unused space from flatpak
-`flatpak uninstall --unused`
+- `flatpak uninstall --unused`
 ---
 
 ## screenshots
