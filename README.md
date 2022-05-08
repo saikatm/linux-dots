@@ -69,6 +69,7 @@ flatpak install flathub org.gnome.BreakTimer-y;
 <p align="center">
   <img src="kitty.png" style="border-radius:2%"/>
 </p>
+
 ### rofi launcher theme
 <p align="center">
   <img src="rofi.png" style="border-radius:2%"/>
