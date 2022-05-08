@@ -22,7 +22,7 @@
 ## install the rofi theme 
 - clone the repo
 - make folders `mkdir -p ~/.config/rofi ~/.local/share/rofi/themes`
-- then `cd .config/rofi; cp -r config.rasi ~/.config/rofi/`
+- then `cd linux-dots; cp -r .config/rofi/. ~/.config/rofi/`
 - copy the files `cp -r catppuccin.rasi ~/.local/share/rofi/themes/`
 - run in terminal `rofi -show drun`
 ### another style for rofi
