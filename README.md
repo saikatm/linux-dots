@@ -31,6 +31,10 @@
 - run in terminal `rofi -combi-modi window,drun,run -show combi`
 ---
 
+## install kitty theme 
+- clone the repo then cd `linux-dots`
+- create folder `mkdir -p ~/.config/kiity; cp -r .config/kitt/* ~/.config/kitty
+
 ### Install Flatpak
 - on arch based: `sudo pacman -S flatpak;` then `reboot`
 - on pop_os: `sudo apt install flatpak; flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;` then `reboot`
