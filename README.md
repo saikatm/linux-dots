@@ -15,7 +15,7 @@
 
 ### add some nerdfonts & fix bengali font issue on linux
 - clone the repo
-- run `cd linux-dots; mkdir -p ~/.fonts; mv .fonts ~/.fonts; fc-cache -fv;`
+- run `cd linux-dots; mkdir -p ~/.fonts; mv .fonts ~/; fc-cache -fv;`
 - then `reboot`
 ---
 
@@ -24,7 +24,7 @@
 - make folders `mkdir -p ~/.config/rofi ~/.local/share/rofi/themes`
 - then `cd linux-dots; cp -r .config/rofi/. ~/.config/rofi/`
 - copy the files `cp -r catppuccin.rasi ~/.local/share/rofi/themes/`
-- run in terminal `rofi -show drun`
+- run in terminal `rofi -show drun` or set a keyboard shortcut like : `super + space`
 ### another style for rofi
 - `cd ~/.config/rofi/`
 - rename the files `mv config.rasi config.rasi.bak; mv config.rasi.alt config.rasi`
