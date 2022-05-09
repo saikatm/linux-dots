@@ -2,9 +2,9 @@
 
 ## Install the Apps 
 ### on debian based distros
-- `sudo apt install kitty rofi papirus-icon-theme gparted preload neofetch htop -y`
+- `sudo apt install kitty rofi papirus-icon-theme gparted preload neofetch htop fish -y`
 ### for arch linux based distors
-- `sudo pacman -S kitty rofi papirus-icon-theme gparted neofetch htop -y`
+- `sudo pacman -S kitty rofi papirus-icon-theme gparted neofetch htop fish -y`
 - `pikaur -S preload`
 ---
 
@@ -24,7 +24,7 @@
 - make folders `mkdir -p ~/.config/rofi ~/.local/share/rofi/themes`
 - then `cd linux-dots; cp -r .config/rofi/. ~/.config/rofi/`
 - copy the files `cp -r catppuccin.rasi ~/.local/share/rofi/themes/`
-- run in terminal `rofi -show drun` or set a keyboard shortcut like : `super + space`
+- run in terminal `rofi -show drun` or set a keyboard shortcut like : `left-alt + space`
 ### another style for rofi
 - `cd ~/.config/rofi/`
 - rename the files `mv config.rasi config.rasi.bak; mv config.rasi.alt config.rasi`
