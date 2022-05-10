@@ -4,14 +4,11 @@ if status is-interactive
 end
 
 
-
-
-
-
 ## Aliases
-alias ls "ls -la --group-directories-first"
-alias lsl "ls --group-directories-first -lh"
-alias search "apt-cache search"
+alias ls "ls --group-directories-first"
+alias lsl "ls -la --group-directories-first -lh"
+alias search "apt search"
+alias show "apt-cache show"
 alias install "sudo apt install --no-install-recommends"
 alias upgrade "sudo apt upgrade"
 alias update "sudo apt update"
@@ -27,7 +24,3 @@ alias font-refresh "fc-cache -fv"
 alias clone "git clone --depth 1"
 alias nf "neofetch"
 
-
-
-## Keybinding
-set fish_key_bindings fish_default_key_bindings
