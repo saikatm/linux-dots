@@ -15,7 +15,7 @@ configuration{
     display-combi:		"  All " ;
     display-Network:		" 𑁍  Network";
     display-ssh:		"  ssh";
-    hover-select:		true;
+    hover-select:		false;
     sidebar-mode:		true; /* set true to enables the tabs at bottom*/
     hide-scrollbar:		false;
     disable-history:		false; /*shows recent apps*/       
@@ -24,7 +24,7 @@ configuration{
     drun-display-format:	"{icon} {name}";
     location:			 0;	
  
-    matching:			"fuzzy";   
+//    matching:			"fuzzy";   
     window-show-actions:	false;      
     combi-hide-mode-prefix:	true;    
 /*  icon-theme:			"Papirus"; */
@@ -40,7 +40,7 @@ configuration{
 
  // set new themes
  
-@theme "~/.config/rofi/rtheme00.rasi"          
+@theme "~/.config/rofi/rtheme01.rasi"          
 //@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
 
 /*=== default configs ====*/

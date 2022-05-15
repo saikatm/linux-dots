@@ -1,0 +1,50 @@
+scout -ftsea .config
+open_withvim
+open_with\vim
+rename mimeapps.list2
+touch mimeapps.list
+rename downloads
+mark v
+rename powerless.vim
+rename powerline.vim_
+rename powerline.vim
+rename rc_
+rename rc
+touch autosave
+open_with vim
+scout -ftsea xs
+scout -ftsea xsessionr
+rename rc_0
+rename rc__
+open_with firefox
+cd /mnt/Dump/
+shell zip -rf 'file.zip' %s
+open_with 
+rename radio-m3u-collection.zip
+open_with less
+rename .xsessionrcA[Aq
+open_with vi
+open_withgeany
+rename .dotfiles
+rename *
+rename plugins
+open_with geany
+scout -ftsea ki
+touch config.rasi
+touch lock
+chmod x
+chmod +x
+chmod +x 
+open_with nvim
+scout -ftsea nv
+scout -ftsea po
+scout ranger
+scout -ftsea 
+open_with
+search 00433
+search 0043
+search 004
+search kitt
+delete
+d
+
