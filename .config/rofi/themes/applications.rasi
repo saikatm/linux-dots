@@ -21,8 +21,8 @@
     text-color:       @foreground;
     padding:          0px;
     margin:           0px;
-    width: 			  40%;
-    height: 		  50%;
+    width:			  40%;
+    height:		  50%;
 }
 
 
@@ -48,7 +48,7 @@ entry {
 }
 
 inputbar {
-	children: 			[ prompt, entry ];
+	children:			[ prompt, entry ];
 	background-image:    url("images/pattern.png");
 	expand:              false;
 	border-radius:     10px;
