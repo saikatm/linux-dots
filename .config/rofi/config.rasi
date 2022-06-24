@@ -21,3 +21,5 @@ configuration{
     steal-focus: true;
 
 }       
+//@theme "/usr/share/rofi/themes/sidebar.rasi"
+@theme "/usr/share/rofi/themes/Paper.rasi"

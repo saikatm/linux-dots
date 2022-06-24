@@ -25,7 +25,7 @@ alias clone "git clone --depth 1"
 alias nf "neofetch"
 alias flu "flatpak update"
 alias gst "git status"
-
+alias ttc "tty-clock -c -t"
 
 # config recomended for bobthe fish theme
 
