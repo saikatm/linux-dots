@@ -14,7 +14,7 @@ cp .config/rofi/ ~/.config/; .config/kitty/ ~/.config/; .config/fish/ ~/.config/
 # install the aur helper
 cd ..
 git clone https://aur.archlinux.org/pikaur.git; 
-cd pikaur; makepkg -fsri -y
+cd pikaur; makepkg -fsri  --noconfirm
 
 # reboot the computer
 echo ~Installation done. please reboot."
