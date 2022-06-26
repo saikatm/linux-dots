@@ -16,6 +16,7 @@ alias nf "neofetch"
 alias fl-u "flatpak update"
 alias fl-l "flatpak list"
 alias g-st "git status"
+alias m "micro"
 alias ttc "tty-clock -c -t"
 
 ## arch based os specific aliases 
