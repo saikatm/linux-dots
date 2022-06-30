@@ -1,11 +1,3 @@
-> git clone [http://github.com/saikatm/linux-dots](http://github.com/saikatm/linux-dots)
-> 
-
-### for arch based distro
-
-```bash
-./arch-install.sh
-
 #!/bin/bash
 
 #update first!
