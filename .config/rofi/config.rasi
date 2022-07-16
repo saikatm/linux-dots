@@ -1,10 +1,16 @@
+
+/** everything is stolen from the internet **/
+/** https://github.com/catppuccin/rofi  **/
+/** https://github.com/siduck/dotfiles **/
+
+
 configuration{
-    modi: "run,drun,window";
+    modi: "run,drun"; /**window **/
     lines: 5;
     font: "JetBrainsMono Nerd Font 14";
     show-icons: true;
-    icon-theme: "Oranchelo";
-    terminal: "st";
+    icon-theme: "Papirus";
+    terminal: "kitty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
@@ -16,7 +22,7 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "~/.config/rofi/catppuccin.rasi"
+@theme "~/.config/rofi/themes/forest.rasi"
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;

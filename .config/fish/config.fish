@@ -11,15 +11,19 @@ alias clone "git clone --depth 1"
 alias nf "neofetch"
 alias fl-u "flatpak update"
 alias fl-l "flatpak list"
-alias g-st "git status"
 alias m "micro"
+
+# git specific alias
+alias g-st "git status"
+alias g-cm "git commit -m"
+alias push "git push -u origin main"
 
 ## arch based os specific aliases 
 alias update "sudo pacman -Syu"
 alias search "pacman -Ss"
 alias remove "sudo pacman -Rsc"
 alias clean "sudo pacman -Sc"
-
+alias pik "pikaur"
 ## debian based OS specifiv aliases 
 #alias upgrade "sudo apt upgrade"
 #alias update "sudo apt update"
