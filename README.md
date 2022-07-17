@@ -1,69 +1,59 @@
-# linux-dots
+dot files for a new linux machine.
 
-## Install the Apps 
-### on debian based distros
-- `sudo apt install kitty rofi papirus-icon-theme gparted preload neofetch htop fish -y`
-### for arch linux based distors
-- `sudo pacman -S kitty rofi papirus-icon-theme gparted neofetch htop fish -y`
-- `pikaur -S preload`
+|       1			  |   	2	              |
+| :-----------------: | :-----------------------------: |
+|        DISTO        |   ARCH / MANJARO / POP-OS   |
+| DESKTOP ENVIRONMENT |              GNOME              |
+|        THEME        | [ZORIN OS DESKTOP THEME](https://github.com/ZorinOS/zorin-desktop-themes) |
+|        ICONS        | [ZORIN OS ICONS](https://github.com/ZorinOS/zorin-icon-themes) OR PAPIRUS ICONS |
+| LAUNCHER | [ROFI](https://github.com/davatorium/rofi) |
+| TERMINAL | KITTY |
+| DOCK | PLANK DOCK |
+
 ---
 
-## fonts and dotfiles for my linux machine.
-- .config - contains the config files for different apps.
-- .fonts - contains some custom fonts.
+## install the configs, fonts and wallpapers
+
+- just `git clone https://github.com/saikatm/linux-dots;`
+
+- Run  `./install.sh` to install everything
+
+- Then `reboot`
+
+  ---
+
+  
+
+### Install the necessary apps with a single command: 
+
+**on Arch based OS: `sudo pacman -S kitty rofi papirus-icon-theme gparted neofetch htop fish plank foliate -y`**
+
+install AUR helper: https://github.com/actionless/pikaur, `pikaur -S preload`; `pikaur -S appimagelauncher`
+
 ---
 
-### add some nerdfonts & fix bengali font issue on linux
-- clone the repo
-- run `cd linux-dots; mkdir -p ~/.fonts; mv .fonts ~/; fc-cache -fv;`
-- then `reboot`
+**on Debian based OS: `sudo apt install kitty rofi papirus-icon-theme gparted preload neofetch htop plank fish foliate-y`**
+
 ---
 
-## install the rofi theme 
-- clone the repo
-- make folders `mkdir -p ~/.config/rofi ~/.local/share/rofi/themes`
-- then `cd linux-dots; cp -r .config/rofi/. ~/.config/rofi/`
-- copy the files `cp -r catppuccin.rasi ~/.local/share/rofi/themes/`
-- run in terminal `rofi -show drun` or set a keyboard shortcut like : `left-alt + space`
-### another style for rofi
-- `cd ~/.config/rofi/`
-- rename the files `mv config.rasi config.rasi.bak; mv config.rasi.alt config.rasi`
-- run in terminal `rofi -combi-modi window,drun,run -show combi`
----
+## install all flatpak apps: 
 
-## install kitty theme 
-- clone the repo then cd `linux-dots`
-- create folder `mkdir -p ~/.config/kitty`
-- copy the files `cp -r .config/kitty/. ~/.config/kitty`
-
-### Install Flatpak
-- on arch based: `sudo pacman -S flatpak;` then `reboot`
-- on pop_os: `sudo apt install flatpak; flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;` then `reboot`
-- for more check : https://flatpak.org/setup/
-
-### must have flatpak apps
-- Motrix Downloader - Better IDM alternative with torrent support.
-- Telegram App - Best IM App.
-- PDF Tool - Can be done online but a having a offline app is better.
-#### paste the whole command in terminal
 `flatpak install flathub net.agalwood.Motrix -y`
 `flatpak install flathub org.telegram.desktop -y;`
 `flatpak install flathub com.github.jeromerobert.pdfarranger -y;`
 `flatpak install flathub com.mattjakeman.ExtensionManager -y;`
 `flatpak install flathub org.gnome.BreakTimer-y;`
 `flatpak install flathub org.librehunt.Organizer -y;`
+`flatpak install flathub io.typora.Typora -y`
 
 ---
 
-## screenshots
-### kitty terminal theme
-<p align="center">
-  <img src="kitty.png" style="border-radius:2%"/>
-</p>
+| MUST HAVE APPS       | LINKS                                                        |
+| -------------------- | ------------------------------------------------------------ |
+| Calculator : Parsify | https://github.com/parsify-dev/desktop                       |
+| App Image Launcher   | `pikuar appimagelauncher;` https://github.com/TheAssassin/AppImageLauncher/releases |
+| Open Bangla Keyboard | https://github.com/OpenBangla/OpenBangla-Keyboard            |
 
-### rofi launcher theme
-<p align="center">
-  <img src="rofi.png" style="border-radius:2%"/>
-</p>
+- fixt virt manager issue network
 
-## forever grateful to linux creators and the community 💝
+  `sudo virsh net-autostart default`
