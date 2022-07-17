@@ -16,7 +16,7 @@ dot files for a new linux machine.
 ### install the configs, fonts and wallpapers
 
 - just `git clone https://github.com/saikatm/linux-dots;`
-- Run  `./install.sh` to install everything
+- Run  `./install-repo.sh` to install everything
 - Then `reboot`
   ---
 ###  Install the necessary apps with a single command: 
