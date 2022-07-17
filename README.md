@@ -18,6 +18,7 @@ dot files for a new linux machine.
 - just `git clone https://github.com/saikatm/linux-dots;`
 - Run  `./install-repo.sh` to install everything
 - Then `reboot`
+
   ---
 ###  Install the necessary apps with a single command: 
 
