@@ -1,4 +1,5 @@
 dot files for a new linux machine.
+<img src="misc/dotfiles-logo.png" alt="dotfiles-logo" style="zoom:50%;" />
 
 |       1			  |   	2	              |
 | :-----------------: | :-----------------------------: |
@@ -12,21 +13,15 @@ dot files for a new linux machine.
 
 ---
 
-## install the configs, fonts and wallpapers
+### install the configs, fonts and wallpapers
 
 - just `git clone https://github.com/saikatm/linux-dots;`
-
 - Run  `./install.sh` to install everything
-
 - Then `reboot`
-
   ---
+###  Install the necessary apps with a single command: 
 
-  
-
-### Install the necessary apps with a single command: 
-
-**on Arch based OS: `sudo pacman -S kitty rofi papirus-icon-theme gparted neofetch htop fish plank foliate -y`**
+**on Arch based OS: `sudo pacman -S --needed base-devel git neofetch ntfs-3g git man-db man-pages gst-libav nano rofi kitty gparted papirus-icon-theme vlc micro clinfo android-tools nomacs firefox flatpak fish plank foliate htop gparted -y`**
 
 install AUR helper: https://github.com/actionless/pikaur, `pikaur -S preload`; `pikaur -S appimagelauncher`
 
@@ -54,6 +49,25 @@ install AUR helper: https://github.com/actionless/pikaur, `pikaur -S preload`; `
 | App Image Launcher   | `pikuar appimagelauncher;` https://github.com/TheAssassin/AppImageLauncher/releases |
 | Open Bangla Keyboard | https://github.com/OpenBangla/OpenBangla-Keyboard            |
 
-- fixt virt manager issue network
+---
 
-  `sudo virsh net-autostart default`
+### Install KVM, Virt manger 
+
+**check for hardware support (virt manager)**
+`LC_ALL=C lscpu | grep Virtualization`
+
+**install the deps**
+`sudo pacman -S virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat libguestfs iptables ebtables -y`
+
+**fix the permissions** 
+`sudo usermod -G kvm -a $USER;`
+`sudo usermod -G libvirt -a $USER;`
+`sudo systemctl enable libvirtd;`
+`sudo systemctl enable --now libvirtd;`
+`sudo reboot`
+
+**enable the service**
+`sudo virsh net-autostart default`
+`sudo systemctl enable libvirtd.service;` 
+`sudo systemctl start libvirtd.service;`
+`reboot;`
