@@ -3,7 +3,6 @@ cd ..;
 ## clone the repos
 git clone https://github.com/saikatm/wallpaperx; 
 git clone https://github.com/saikatm/fonts; 
-git clone https://github.com/saikatm/linux-dots;
 ## installing the fonts
 cd fonts; cp -r .fonts ~/; cd ..;
 ## installing the wallpapers
