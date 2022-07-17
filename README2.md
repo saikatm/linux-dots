@@ -55,3 +55,6 @@ on Debian based OS: `sudo apt install kitty rofi papirus-icon-theme gparted prel
 | App Image Launcher   | `pikuar appimagelauncher;` https://github.com/TheAssassin/AppImageLauncher/releases |
 | Open Bangla Keyboard | https://github.com/OpenBangla/OpenBangla-Keyboard            |
 
+- fixt virt manager issue network
+
+  `sudo virsh net-autostart default`
