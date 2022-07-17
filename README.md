@@ -43,30 +43,16 @@
 
 ### must have flatpak apps
 - Motrix Downloader - Better IDM alternative with torrent support.
-- Librewolf Browser - Bettter Firefox fork.
-- VLC Media Player - For watching movies.
 - Telegram App - Best IM App.
-- New Sleek Gnome Text Editor - Alternative to Sublime/Notepad.
 - PDF Tool - Can be done online but a having a offline app is better.
 #### paste the whole command in terminal
-`flatpak install flathub net.agalwood.Motrix -y;
-flatpak install flathub io.gitlab.librewolf-community -y;
-flatpak install flathub org.videolan.VLC -y;
-flatpak install flathub org.telegram.desktop -y;
-flatpak install flathub org.gnome.TextEditor -y;
-flatpak install flathub com.github.jeromerobert.pdfarranger -y;`
+`flatpak install flathub net.agalwood.Motrix -y`
+`flatpak install flathub org.telegram.desktop -y;`
+`flatpak install flathub com.github.jeromerobert.pdfarranger -y;`
+`flatpak install flathub com.mattjakeman.ExtensionManager -y;`
+`flatpak install flathub org.gnome.BreakTimer-y;`
+`flatpak install flathub org.librehunt.Organizer -y;`
 
-### optional apps
-- Extension Manager for Gnome
-- File Organizer
-- Screen Breaktimer App
-
-`flatpak install flathub com.mattjakeman.ExtensionManager -y;
-flatpak install flathub org.librehunt.Organizer -y;
-flatpak install flathub org.gnome.BreakTimer-y;`
-
-### remove unused space from flatpak
-- `flatpak uninstall --unused`
 ---
 
 ## screenshots
