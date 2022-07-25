@@ -8,15 +8,18 @@ dot files for a new linux machine.
 |        THEME        | [ZORIN OS DESKTOP THEME](https://github.com/ZorinOS/zorin-desktop-themes) |
 |        ICONS        | [ZORIN OS ICONS](https://github.com/ZorinOS/zorin-icon-themes) OR PAPIRUS ICONS |
 | LAUNCHER | [ROFI](https://github.com/davatorium/rofi) |
-| TERMINAL | KITTY |
+| TERMINAL | [KITTY TERMINAL](https://sw.kovidgoyal.net/kitty/) |
 | DOCK | PLANK DOCK |
 
 ---
 
 ### install the configs, fonts and wallpapers
 
-- just `git clone https://github.com/saikatm/linux-dots;`
-- Run  `./install-repo.sh` to install everything
+- first `git clone https://github.com/saikatm/linux-dots;`
+- then cd `linux dots ` `./install-dotfiles.sh` to install the dotfiles
+
+### install fonts and wallpapers
+- clone the repo `cd linux-dots` run `./install-fonts` for installing fonts and  `./install-walls.sh` for wallpapers
 - Then `reboot`
 
   ---
