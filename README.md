@@ -13,13 +13,18 @@ dot files for a new linux machine.
 
 ---
 
-### install the configs, fonts and wallpapers
 
-- first `git clone https://github.com/saikatm/linux-dots;`
+### Dependencies
+- sudo apt install OR sudo pacman -S `kitty fish rofi plank`
+
+### install the dotfiles, fonts and wallpapers
+
+- just `git clone https://github.com/saikatm/linux-dots;`
 - then cd `linux dots ` `./install-dotfiles.sh` to install the dotfiles
 
 ### install fonts and wallpapers
-- clone the repo `cd linux-dots` run `./install-fonts` for installing fonts and  `./install-walls.sh` for wallpapers
+- run `./install-fonts` for installing fonts
+- run `./install-walls.sh` for wallpapers
 - Then `reboot`
 
   ---
