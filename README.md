@@ -1,5 +1,4 @@
-dot files for a new linux machine.
-<img src="misc/dotfiles-logo.png" alt="dotfiles-logo" style="zoom:50%;" />
+## dotfiles for a new linux machine.
 
 |       1			  |   	2	              |
 | :-----------------: | :-----------------------------: |
@@ -80,3 +79,5 @@ install AUR helper: https://github.com/actionless/pikaur, `pikaur -S preload`; `
 `sudo systemctl enable libvirtd.service;` 
 `sudo systemctl start libvirtd.service;`
 `reboot;`
+
+## The repo is work in progress❗
