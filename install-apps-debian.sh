@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #update first!
-echo "checking for update.."
+echo "checking for update..";
 sudo apt update -y;
 
 # install the apps
-echo "installing all the apps.."
+echo "installing all the apps..";
 sudo apt install -y papirus-icon-theme gparted rofi kitty ntfs-3g vlc micro clinfo adb nomacs firefox plank fish htop vlc micro;
 echo "Basic apps are installed!";
 
