@@ -3,7 +3,7 @@
 #update first!
 sudo apt update -y;
 
-sudo apt install -y papirus-icon-theme gparted rofi kitty ntfs-3g vlc micro clinfo adb nomacs firefox;
+sudo apt install -y papirus-icon-theme gparted rofi kitty ntfs-3g vlc micro clinfo adb nomacs firefox plank;
 echo "Basic apps are installed!";
 
 
