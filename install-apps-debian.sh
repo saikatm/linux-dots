@@ -1,9 +1,12 @@
 #!/bin/bash
 
 #update first!
+echo "checking for update.."
 sudo apt update -y;
 
-sudo apt install -y papirus-icon-theme gparted rofi kitty ntfs-3g vlc micro clinfo adb nomacs firefox plank fish;
+# install the apps
+echo "installing all the apps.."
+sudo apt install -y papirus-icon-theme gparted rofi kitty ntfs-3g vlc micro clinfo adb nomacs firefox plank fish htop vlc micro;
 echo "Basic apps are installed!";
 
 
@@ -22,4 +25,3 @@ sudo systemctl start libvirtd.service;
 
 # reboot the computer
 echo "Installation done. please reboot!";
-
