@@ -2,12 +2,24 @@
 
 #update first!
 echo "checking for update..";
-sudo pacman -Syu;
+sudo pacman -Sy;
 
 # install the apps
 echo "installing all the apps..";
 
-pacman -S --needed base-devel git neofetch ntfs-3g git man-db man-pages gst-libav nano rofi kitty gparted papirus-icon-theme vlc micro clinfo android-tools nomacs firefox -y;
+sudo pacman -S --needed --noconfirm - < packages-arch.txt
+
+# install the aur helper
+echo "installing aur helper.."
+cd ..;
+git clone https://aur.archlinux.org/pikaur.git; 
+cd pikaur; makepkg --noconfirm -fsri;
+cd ..;
+
+# reboot the computer
+echo "Installation done. please reboot!"
+
+
 
 # #install KVM and virt manager.
 # echo "Installatiing KVM and Virt Manager.."
@@ -20,13 +32,3 @@ pacman -S --needed base-devel git neofetch ntfs-3g git man-db man-pages gst-liba
 # sudo systemctl enable libvirtd;
 # sudo systemctl start libvirtd.service;
 
-
-# install the aur helper
-echo "installing aur helper.."
-cd ..;
-git clone https://aur.archlinux.org/pikaur.git; 
-cd pikaur; makepkg -fsri -y;
-cd ..;
-
-# reboot the computer
-echo "Installation done. please reboot!"
