@@ -170,3 +170,4 @@ textbox {
     horizontal-align:            0.0;
     highlight:                   none;
 }
+@import "~/.config/rofi/colors/yousai.rasi"
