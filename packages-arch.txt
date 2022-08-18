@@ -1,19 +1,16 @@
 kitty
-rofi 
+rofi
 git
 neofetch
 ntfs-3g
 git
-man-db
-man-pages
 gst-libav
-nano rofi
-kitty
-gparted
 papirus-icon-theme
-vlc
 micro
 android-tools
 nomacs
 firefox
 lsd
+mpv
+fish
+xclip

@@ -2,6 +2,7 @@ if status is-interactive
 #	rxfetch;
     # Commands to run in interactive sessions can go here
 end
+set fish_greeting
 
 #----- Short aliases are for frequent commands and options-------
 # check here for more: https://github.com/GitAlias/gitalias

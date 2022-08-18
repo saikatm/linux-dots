@@ -14,8 +14,6 @@ echo "Basic apps are installed!";
 echo "Installing virt manager..";
 sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager;
 
-
-
 #fix the permissions 
 echo "fixing permissions!";
 sudo usermod -G kvm -a $USER;

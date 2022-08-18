@@ -38,3 +38,9 @@
 > [Open Bangla Keyboard](https://github.com/OpenBangla/OpenBangla-Keyboard)
 ---
 ### The repo is work in progress❗
+
+--- 
+# TODO
+ - make specific branch as distro specific
+   - for arch based distro
+   - debian based distro 

@@ -7,18 +7,18 @@ sudo pacman -Sy;
 # install the apps
 echo "installing all the apps..";
 
-sudo pacman -S --needed --noconfirm - < packages-arch.txt
+sudo pacman -S --noconfirm - < packages-arch.txt
 
 # install the aur helper
-echo "installing aur helper.."
-cd ..;
-git clone https://aur.archlinux.org/pikaur.git; 
-cd pikaur; makepkg --noconfirm -fsri;
-cd ..;
-
-# reboot the computer
-echo "Installation done. please reboot!"
-
+# echo "installing aur helper.."
+# cd ..;
+# git clone https://aur.archlinux.org/pikaur.git;
+# cd pikaur; makepkg --noconfirm -fsri;
+# cd ..;
+# 
+# # reboot the computer
+# echo "Installation done. please reboot!"
+# 
 
 
 # #install KVM and virt manager.
