@@ -7,3 +7,4 @@ flatpak install flathub org.telegram.desktop -y;
 flatpak install flathub com.github.jeromerobert.pdfarranger -y;
 flatpak install flathub org.gnome.clocks -y;
 flatpak install flathub com.visualstudio.code -y;
+flatpak install flathub org.gnome.BreakTimer -y;
