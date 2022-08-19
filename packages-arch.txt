@@ -14,3 +14,4 @@ lsd
 mpv
 fish
 xclip
+libreoffice
