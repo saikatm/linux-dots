@@ -4,7 +4,9 @@
 
 1. recomneded to install the fonts first: `./fonts-install.sh` 
 2. install the dotfiles:`./dotfiles-install.sh`
-3. install the apps:`./archlinux-install-all.sh` OR `./debian-install-all.sh` & `./flatpak-apps-install.sh`
+3. install the apps:
+    - `./archlinux-install-all.sh` **OR** `./debian-install-all.sh` 
+    - `./flatpak-apps-install.sh`
 
 #### must have apps for linux.
 - [Parsify Calculator](https://github.com/parsify-dev/desktop)  
@@ -16,7 +18,11 @@
 #### cool stuffs
 - [ZorinOS GTK Theme](https://github.com/ZorinOS/zorin-desktop-themes) 
 - [Rofi Themes](https://github.com/adi1090x/rofi)
+    - [rofi calc](https://github.com/svenstaro/rofi-calc)
+    - [rofi emoji](https://github.com/Mange/rofi-emoji)
 - gnome extensions
     - [session manager](https://extensions.gnome.org//extension/4709/another-window-session-manager/)
     - [space bar](https://extensions.gnome.org//extension/5090/space-bar/)
     - [vitals](https://extensions.gnome.org//extension/1460/vitals/)
+
+> my journey from Windows 🪟 > macOS 🍎 > Linux 🐧 ends here.
