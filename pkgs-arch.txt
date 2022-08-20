@@ -15,3 +15,5 @@ mpv
 fish
 xclip
 libreoffice
+htop
+flameshot

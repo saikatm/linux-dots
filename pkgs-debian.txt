@@ -1,0 +1,17 @@
+flameshot
+rofi
+kitty
+git
+neofetch
+micro
+papirus-icon-theme
+adb
+nomacs
+firefox
+mpv
+fish
+xclip
+gparted
+htop
+ntfs-3g
+gst-libav
