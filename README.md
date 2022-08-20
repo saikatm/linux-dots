@@ -9,9 +9,9 @@
     - `./flatpak-apps-install.sh`
 
 #### must have apps for linux.
-- [Parsify Calculator](https://github.com/parsify-dev/desktop)  
+- [Parsify Calculator](https://github.com/parsify-dev/desktop/releases)  
 - [AppImage Launcher](https://github.com/TheAssassin/AppImageLauncher/releases)
-- [Open Bangla Keyboard](https://github.com/OpenBangla/OpenBangla-Keyboard)
+- [Open Bangla Keyboard](https://github.com/OpenBangla/OpenBangla-Keyboard#installation:~:text=Chandrabindu%22%20position%20fixing.-,Installation,-If%20you%20had)
 - [Todoist](https://todoist.com/help/articles/how-to-install-todoist-on-linux#:~:text=version%20using%20AppImage-,Download,.,-Move%20it%20to)
 - [Notion Enhanced](https://notion-enhancer.github.io/getting-started/installation#:~:text=x86_64%20build%20(enhanced)%3A%20.AppImage%2C%20.zip)
 - [Notesnook](https://notesnook.com/downloads/#otherplatforms:~:text=Notesnook%20for%20Linux-,AppImage,-.deb)
