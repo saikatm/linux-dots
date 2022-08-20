@@ -16,12 +16,7 @@
 #### cool stuffs
 - [ZorinOS GTK Theme](https://github.com/ZorinOS/zorin-desktop-themes) 
 - [Rofi Themes](https://github.com/adi1090x/rofi)
-
 - gnome extensions
-
     - [session manager](https://extensions.gnome.org//extension/4709/another-window-session-manager/)
-
     - [space bar](https://extensions.gnome.org//extension/5090/space-bar/)
-
     - [vitals](https://extensions.gnome.org//extension/1460/vitals/)
-    
