@@ -11,4 +11,4 @@ echo "moving neofetch files" &&
 mkdir -p ~/.config/neofetch; cp -r neofetch/ ~/.config &&
 echo "moving plank files" &&
 mkdir -p ~/.local/share/plank && cp -r plank/themes/ ~/.local/share/plank/ &&
-echo "Everyting is installed!";
+echo "dotfiles are copied!";
