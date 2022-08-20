@@ -1,7 +1,5 @@
 ## dotfiles for quickly start a new linux machine.
 
-<img src="/misc/banner.png" alt="banner" style="height: 100px; width:160px;"/>
-
 > **Note**: The repo is a work in progress ‼️
 
 ### installation instruction 
