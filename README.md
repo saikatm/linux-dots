@@ -1,12 +1,8 @@
-## dotfiles/config files for quickly sertting up new linux machine.
+## dotfiles for quickly start a new linux machine.
 
-### Recomended stuff for Eye Candy.
+<img src="/misc/banner.png" alt="banner" style="height: 100px; width:160px;"/>
 
-[ZORIN OS DESKTOP THEME](https://github.com/ZorinOS/zorin-desktop-themes) 
-
-[ZORIN OS ICONS](https://github.com/ZorinOS/zorin-icon-themes)
-
----
+> **Note**: The repo is a work in progress ‼️
 
 ### installation instruction 
 `git clone https://github.com/saikatm/linux-dots; cd linux-dots;` 
@@ -22,25 +18,19 @@
 #### install fonts 
 `./install-fonts` 
 
-  ---
+### appaimages for linux.
+- [Parsify Calculator](https://github.com/parsify-dev/desktop)  
+- [AppImage Launcher](https://github.com/TheAssassin/AppImageLauncher/releases)
+- [Open Bangla Keyboard](https://github.com/OpenBangla/OpenBangla-Keyboard)
+- [Todoist](https://todoist.com/help/articles/how-to-install-todoist-on-linux#:~:text=version%20using%20AppImage-,Download,.,-Move%20it%20to)
+- [Notion Enhanced](https://notion-enhancer.github.io/getting-started/installation#:~:text=x86_64%20build%20(enhanced)%3A%20.AppImage%2C%20.zip)
 
-### install all flatpak apps: 
-1. install flatpak from [here](https://flatpak.org/setup/)
-2. `install-flatpak-apps.sh`
+#### for Eye Candy stuff.
 
----
+- [ZorinOS GTK Theme](https://github.com/ZorinOS/zorin-desktop-themes) 
+- [Rofi Themes](https://github.com/adi1090x/rofi)
 
-### Cool Linux Apps.
-> [Parsify Calculator](https://github.com/parsify-dev/desktop)  
-
-> [App Image Launcher](https://github.com/TheAssassin/AppImageLauncher/releases)
-
-> [Open Bangla Keyboard](https://github.com/OpenBangla/OpenBangla-Keyboard)
----
-### The repo is work in progress❗
-
---- 
-# TODO
+### TODO
  - make specific branch as distro specific
    - for arch based distro
    - debian based distro 
