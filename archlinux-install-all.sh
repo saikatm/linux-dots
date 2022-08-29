@@ -14,7 +14,7 @@ cd pikaur; makepkg --noconfirm -fsri;
 cd ..;
 # install KVM and virt manager.
 echo "Installing kvm & virt manager..";
-sudo pacman -S virt-manager qemu vde2 ebtazbles dnsmasq bridge-utils openbsd-netcat libguestfs iptables ebtables -y;
+sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs -y;
 # fix the permissions
 echo "fixing permissions & starting the services..";
 sudo usermod -G kvm -a $USER;
