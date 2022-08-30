@@ -2,7 +2,6 @@ kitty
 rofi
 git
 neofetch
-ntfs-3g
 git
 gst-libav
 papirus-icon-theme
