@@ -13,5 +13,4 @@ fish
 xclip
 gparted
 htop
-ntfs-3g
 gst-libav
