@@ -2,11 +2,12 @@
 
 > **Note**: This repo is a work in progress forever.
 
+![Ideal Gnome Desktop](/misc/desktop.png "Ideal Gnome Desktop")
 1. recomneded to install the fonts first: `./fonts-install.sh` 
 2. install the dotfiles:`./dotfiles-install.sh`
 3. install the apps:
     - `./archlinux-install-all.sh` **OR** `./debian-install-all.sh` 
-    - `./flatpak-apps-install.sh`sa
+    - `./flatpak-apps-install.sh`
 
 #### must have apps for linux.
 - [Parsify Calculator](https://github.com/parsify-dev/desktop/releases)  
