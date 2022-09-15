@@ -1,4 +1,4 @@
-flatpak install flathub com.google.Chrome -y;
+# flatpak install flathub com.google.Chrome -y;
 flatpak install flathub net.agalwood.Motrix -y:
 flatpak install flathub com.github.johnfactotum.Foliate -y;
 flatpak install flathub com.mattjakeman.ExtensionManager -y;
