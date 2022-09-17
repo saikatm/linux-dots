@@ -6,6 +6,7 @@ set fish_greeting
 
 #----- Short aliases are for frequent commands and options-------
 # check here for more: https://github.com/GitAlias/gitalias
+alias code "flatpak run com.visualstudio.code"
 alias g-push "git push -u origin main"
 alias g-a "git add"
 alias g-b "git branch"
