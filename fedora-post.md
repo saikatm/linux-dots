@@ -26,3 +26,7 @@ sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=Pack
 
 sudo dnf groupupdate sound-and-video
 
+## install development tools
+
+sudo dnf install kernel-headers kernel-devel
+sudo dnf group install "C Development Tools and Libraries"
