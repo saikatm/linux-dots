@@ -1,0 +1,14 @@
+android-tools
+fish
+flameshot
+git
+htop
+kitty
+libreoffice
+lsd
+micro
+mpv
+neofetch
+nomacs
+papirus-icon-theme
+xclip
