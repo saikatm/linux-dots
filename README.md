@@ -1,6 +1,6 @@
 # dotfiles for quickly start a new linux machine.
 
-![alt text](/Misc/desktop.jpg "Gnome Desktop")
+![alt text](/Misc/desktop.png "gnome is the best")
 
 > **Note**: This repo is a work in progress forever.
 
