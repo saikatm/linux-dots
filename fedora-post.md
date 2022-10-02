@@ -1,6 +1,6 @@
 ## configure dnf
 
-sudo nano /etc/dnf/dnf.conf  
+`sudo nano /etc/dnf/dnf.conf`  
 fastestmirror=True  
 max_paralleldownloads=10  
 defaultyes=True  
