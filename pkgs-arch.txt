@@ -17,3 +17,4 @@ papirus-icon-theme
 rofi
 speedtest-cli
 xclip
+duf
