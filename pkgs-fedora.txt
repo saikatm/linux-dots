@@ -1,3 +1,4 @@
+lm_sensors-libs
 android-tools
 fish
 flameshot
@@ -12,3 +13,7 @@ neofetch
 nomacs
 papirus-icon-theme
 xclip
+htop
+neofetch
+rofi
+gnome-tweaks

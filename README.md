@@ -17,7 +17,7 @@
 - [Todoist](https://todoist.com/help/articles/how-to-install-todoist-on-linux#:~:text=version%20using%20AppImage-,Download,.,-Move%20it%20to)
 - [Notion Enhanced](https://notion-enhancer.github.io/getting-started/installation#:~:text=x86_64%20build%20(enhanced)%3A%20.AppImage%2C%20.zip)
 - [Notesnook](https://notesnook.com/downloads/#otherplatforms:~:text=Notesnook%20for%20Linux-,AppImage,-.deb)
-- [Autto-cpu-freq](https://github.com/AdnanHodzic/auto-cpufreq) (for laptop)
+- [auto-cpufreq](https://github.com/AdnanHodzic/auto-cpufreq) (for laptop)
 ### Eye Candy
 
 <details>

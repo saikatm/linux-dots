@@ -1,4 +1,6 @@
 #!/bin/bash
+## change shell to fish
+chsh -s $(which fish);
 ## install the config files
 cd .config &&
 echo "moving fish files" &&
