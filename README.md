@@ -1,14 +1,15 @@
 # dotfiles for quickly start a new linux machine.
 
-![alt text](/Misc/desktop.png "gnome is the best")
+![alt text](/Misc/desktop.jpg "Gnome Desktop")
 
 > **Note**: This repo is a work in progress forever.
 
 1. recomneded to install the fonts first: `./fonts-install.sh` 
 2. install the dotfiles:`./dotfiles-install.sh`
-3. install the apps:
-    - `./archlinux-install-all.sh` **OR** `./debian-install-all.sh` 
-    - `./flatpak-apps-install.sh`
+3. install the packages:
+    - for arch based : `./archlinux-install-all.sh`
+    - for debeian based : `./debian-install-all.sh` 
+    - for fedora based : `./flatpak-apps-install.sh`
 
 #### Must have apps for linux.
 - [Parsify Calculator](https://github.com/parsify-dev/desktop/releases)  
@@ -18,7 +19,10 @@
 - [Notion Enhanced](https://notion-enhancer.github.io/getting-started/installation#:~:text=x86_64%20build%20(enhanced)%3A%20.AppImage%2C%20.zip)
 - [Notesnook](https://notesnook.com/downloads/#otherplatforms:~:text=Notesnook%20for%20Linux-,AppImage,-.deb)
 - [auto-cpufreq](https://github.com/AdnanHodzic/auto-cpufreq) (for laptop)
+
 ### Eye Candy
+
+- [Conky Theme](https://github.com/closebox73/Chepeus)
 
 <details>
   <summary>gtk themes 🎡</summary>

@@ -1,8 +1,6 @@
 ## configure dnf
 
 sudo nano /etc/dnf/dnf.conf
-
-# added for speed
 fastestmirror=True
 max_paralleldownloads=10
 defaultyes=True
@@ -26,9 +24,8 @@ sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=Pack
 
 sudo dnf groupupdate sound-and-video
 
-## install preload
-
-sudo dnf copr enable elxreno/preload -y && sudo dnf install preload -y; systemctl start preload; systemctl enable preload;
+## enable preload
+sudo dnf copr enable elxreno/preload -y && sudo dnf install preload -y
 
 ## install development tools
 
