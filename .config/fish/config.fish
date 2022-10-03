@@ -42,6 +42,8 @@ alias remove "sudo pacman -Rsc"
 alias clean "sudo pacman -Sc"
 alias pik "pikaur"
 
+# alias for auto-cpufreq
+alias cpu "sudo auto-cpufreq --stats"
 
 ##------ debian based OS specifiv aliases-------## 
 #alias upgrade "sudo apt upgrade"

@@ -10,3 +10,4 @@ flatpak install flathub org.gnome.clocks -y;
 flatpak install flathub org.librehunt.Organizer -y;
 flatpak install flathub org.mozilla.firefox -y; 
 flatpak install flathub org.telegram.desktop -y;
+flatpak install flathub net.agalwood.Motrix -y;
