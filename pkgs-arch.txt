@@ -7,7 +7,6 @@ gparted
 gst-libav
 htop
 kitty
-libreoffice
 lsd
 micro
 mpv

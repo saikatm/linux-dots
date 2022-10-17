@@ -5,7 +5,6 @@ flameshot
 git
 htop
 kitty
-libreoffice
 lsd
 micro
 mpv
