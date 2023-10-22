@@ -4,7 +4,7 @@ flameshot
 flatpak
 git
 gparted
-gst-libav
+gstreamer1.0-libav
 htop
 kitty
 micro
