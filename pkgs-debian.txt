@@ -16,3 +16,4 @@ rofi
 speedtest-cli
 xclip
 duf
+nala
