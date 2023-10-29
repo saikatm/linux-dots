@@ -17,3 +17,4 @@ speedtest-cli
 xclip
 duf
 preload
+psensor
