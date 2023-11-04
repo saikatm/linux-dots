@@ -4,9 +4,9 @@ if status is-interactive
 end
 set fish_greeting
 
-#----- Short aliases are for frequent commands and options-------
 # check here for more: https://github.com/GitAlias/gitalias
-#alias code "flatpak run com.visualstudio.code"
+
+#----- aliases git-------
 alias g-push "git push -u origin main"
 alias g-a "git add"
 alias g-b "git branch"
@@ -23,24 +23,31 @@ alias g-sb "git show-branch"
 alias g-smui "git submodule update --init"
 alias g-s "git status"
 alias g-w "git whatchanged"
+alias clone "git clone --depth 1"
 
-#--------global Aliases agnostic to any distribution--------
+
+#--------global aliases agnostic to any distribution--------
+#alias code "flatpak run com.visualstudio.code"
 alias ls "ls --group-directories-first"
 alias lsl "ls -la --group-directories-first -lh"
 alias font-refresh "fc-cache -fv"
-alias clone "git clone --depth 1"
 alias nf "neofetch"
-alias fl-u "flatpak update"
-alias fl-l "flatpak list"
+alias flu "flatpak update"
+alias fll "flatpak list"
 alias m "micro"
 alias lsd "lsd -la"
+alias b "btm -b" #for btm process/system monitor basic view like htop
+
+#---------debian based os specific aliases---------
+alias nlu "sudo nala update"
+alias nlug "sudo nala upgrade"
+alias nls "nala search"
 
 #---------arch based os specific aliases---------
-alias update "sudo pacman -Syu"
-alias search "pacman -Ss"
-alias remove "sudo pacman -Rsc"
-alias clean "sudo pacman -Sc"
-alias pik "pikaur"
+# alias pmu "sudo pacman -Syu"
+# alias pms "pacman -Ss"
+# alias pmr "sudo pacman -Rsc"
+# alias pmc "sudo pacman -Sc"
 
 # alias for auto-cpufreq
 alias cpu "sudo auto-cpufreq --stats"
