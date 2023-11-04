@@ -24,6 +24,8 @@ alias g-smui "git submodule update --init"
 alias g-s "git status"
 alias g-w "git whatchanged"
 alias clone "git clone --depth 1"
+alias pull "git pull"
+
 
 
 #--------global aliases agnostic to any distribution--------
