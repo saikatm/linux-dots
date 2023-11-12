@@ -18,3 +18,4 @@ xclip
 duf
 preload
 psensor
+inxi
