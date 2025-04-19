@@ -84,17 +84,3 @@ If you encounter issues:
 
 > 💡 **Pro Tip**: After setup, reboot your system for all changes to take effect:  `sudo reboot now`
 
----
-
-```
-Key improvements made:
-1. Added a more detailed feature comparison table
-2. Included direct download commands for the scripts
-3. Organized applications into clear categories
-4. Added troubleshooting section
-5. Improved visual hierarchy with icons and checkmarks
-6. Made the reboot notice more prominent
-7. Added maintenance notice at the bottom
-8. Ensured all links are properly formatted
-9. Added Timeshift as recommended backup solution
-10. Included Papirus Icon Theme in customization section
