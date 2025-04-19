@@ -43,10 +43,10 @@ wget https://raw.githubusercontent.com/saikatm/linux-dots/main/popos-setup.sh &&
 
 ```bash
 # Install recommended fonts
-./fonts-install.sh
+wget https://raw.githubusercontent.com/saikatm/linux-dots/main/fonts-install.sh && chmod +x fonts-install.sh && sudo ./fonts-install.sh
 
 # Apply system dotfiles
-./dotfiles-install.sh
+wget https://raw.githubusercontent.com/saikatm/linux-dots/main/dotfiles-install.sh && chmod +x dotfiles-install.sh && sudo ./dotfiles-install.sh
 ```
 
 ## 🌟 Essential Applications
@@ -75,12 +75,7 @@ wget https://raw.githubusercontent.com/saikatm/linux-dots/main/popos-setup.sh &&
 - [Chepeus Conky Theme](https://github.com/closebox73/Chepeus) - Desktop widgets
 - [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) - Icon pack
 
-## 🛠️ Troubleshooting
-If you encounter issues:
-1. Check the log file at `/tmp/fedora_setup_log.txt` or `/tmp/popos_setup_log.txt`
-2. Verify internet connection
-3. Ensure you have sufficient disk space
-4. Try running the script again
 
-> 💡 **Pro Tip**: After setup, reboot your system for all changes to take effect:  `sudo reboot now`
+
+> 💡 Tip  : After setup, reboot your system for all changes to take effect.
 
