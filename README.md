@@ -1,5 +1,3 @@
-Here's the complete markdown output with all your requested changes:
-
 ## Linux System Setup Dotfiles
 
 **Quickly configure Fedora or Pop!_OS systems with optimized settings and essential applications.**  
