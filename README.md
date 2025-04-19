@@ -16,7 +16,6 @@ Here's the complete markdown output with all your requested changes:
 | Development Tools       | C Development Tools        | Build Essential           |
 | Cloud Storage           | MEGA, Dropbox              | MEGA, Dropbox             |
 
-## 🚀 Quick Start
 
 ### 1. System Setup Scripts
 
@@ -43,7 +42,7 @@ wget https://raw.githubusercontent.com/saikatm/linux-dots/main/popos-setup.sh &&
 
 ```bash
 # Install recommended fonts
-wget https://raw.githubusercontent.com/saikatm/linux-dots/main/fonts-install.sh && chmod +x fonts-install.sh && sudo ./fonts-install.sh
+wget https://raw.githubusercontent.com/saikatm/linux-dots/main/fonts-install.sh -O fonts-install.sh && chmod +x fonts-install.sh && sudo ./fonts-install.sh
 
 # Apply system dotfiles
 wget https://raw.githubusercontent.com/saikatm/linux-dots/main/dotfiles-install.sh && chmod +x dotfiles-install.sh && sudo ./dotfiles-install.sh
