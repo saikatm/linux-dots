@@ -16,31 +16,22 @@ Here's the complete markdown output with all your requested changes:
 | Development Tools       | C Development Tools        | Build Essential           |
 | Cloud Storage           | MEGA, Dropbox              | MEGA, Dropbox             |
 
-## 📥 Prerequisites
-- Fresh system installation (Fedora or Pop!_OS)
-- Sudo/root privileges
-- Stable internet connection
-- Minimum 20GB disk space
-
 ## 🚀 Quick Start
 
 ### 1. System Setup Scripts
 
 **For Fedora Systems:**
 ```bash
-wget https://raw.githubusercontent.com/saikatm/linux-dots/main/fedora-setup.sh
-chmod +x fedora-setup.sh
-sudo ./fedora-setup.sh
+wget https://raw.githubusercontent.com/saikatm/linux-dots/main/fedora-setup.sh && chmod +x fedora-setup.sh && sudo ./fedora-setup.sh
 ```
 
 **For Pop!_OS/Ubuntu Systems:**
 ```bash
-wget https://raw.githubusercontent.com/saikatm/linux-dots/main/popos-setup.sh
-chmod +x popos-setup.sh
-sudo ./popos-setup.sh
+wget https://raw.githubusercontent.com/saikatm/linux-dots/main/popos-setup.sh && chmod +x popos-setup.sh && sudo ./popos-setup.sh
 ```
 
 *Both scripts will:*
+
 ✔ Configure optimized package manager settings  
 ✔ Enable essential software repositories  
 ✔ Install development tools and utilities  
