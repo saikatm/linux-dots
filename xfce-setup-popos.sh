@@ -63,8 +63,8 @@ sudo apt install -y \
     xfce4-panel \
     xfce4-session \
     xfce4-settings \
-    thunar \
-    lightdm || { error_log "Failed to install XFCE packages"; exit 1; }
+    xfce4-whiskermenu-plugin \
+    thunar || { error_log "Failed to install XFCE packages"; exit 1; }
 
 # Remove some unnecessary applications that might be installed
 log "Removing unnecessary XFCE applications..."

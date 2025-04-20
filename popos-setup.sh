@@ -493,7 +493,6 @@ packages=(
   "nomacs"
   "papirus-icon-theme"
   "xclip"
-  "gnome-tweaks"
   "duf"
   "psensor"
   "curl"
@@ -601,12 +600,10 @@ if [ "$flatpak_confirmed" = true ]; then
   print_info "Installing Flatpak applications..."
   
   flatpak_apps=(
-    "com.dropbox.Client:Dropbox"
-    "org.videolan.VLC:VLC"
     "com.brave.Browser:Brave Browser"
-    "org.qbittorrent.qBittorrent:qBittorrent"
     "org.libreoffice.LibreOffice:LibreOffice"
     "org.gnome.Papers:Papers"
+    "net.epson.epsonscan2"
   )
   
   for app_info in "${flatpak_apps[@]}"; do
