@@ -68,7 +68,8 @@ sudo apt install -y \
     git \
     sassc \
     libglib2.0-dev \
-    libxml2-utils || { log "Failed to install theme dependencies"; exit 1; }
+    libxml2-utils \
+    meson || { log "Failed to install theme dependencies"; exit 1; }
 
 # Install latest Materia theme from GitHub
 log "Installing latest Materia theme from GitHub..."
@@ -76,7 +77,18 @@ cd /tmp || { log "Failed to cd to /tmp"; exit 1; }
 rm -rf materia-theme 2>/dev/null || true
 git clone https://github.com/nana-4/materia-theme.git || { log "Failed to clone Materia theme repository"; exit 1; }
 cd materia-theme || { log "Failed to cd to materia-theme"; exit 1; }
-./install.sh || { log "Failed to install Materia theme"; exit 1; }
+
+# Check if install.sh exists, otherwise try meson build method
+if [ -f "./install.sh" ]; then
+    # Method 1: Using install.sh if it exists
+    chmod +x ./install.sh
+    ./install.sh || { log "Failed to install Materia theme using install.sh"; exit 1; }
+else
+    # Method 2: Using meson build system (newer versions)
+    log "install.sh not found, trying meson build method..."
+    meson setup _build || { log "Failed to setup meson build"; exit 1; }
+    meson install -C _build || { log "Failed to install with meson"; exit 1; }
+fi
 
 # Install Papirus icon theme as it goes well with Materia
 log "Installing Papirus icon theme..."
@@ -128,7 +140,8 @@ log "Uninstalling build dependencies..."
 sudo apt remove -y \
     sassc \
     libglib2.0-dev \
-    libxml2-utils || log "Warning: Could not remove some build dependencies."
+    libxml2-utils \
+    meson || log "Warning: Could not remove some build dependencies."
 
 # Cleanup
 log "Cleaning up..."
