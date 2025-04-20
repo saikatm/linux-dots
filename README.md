@@ -39,6 +39,9 @@ wget https://raw.githubusercontent.com/saikatm/linux-dots/main/popos-setup.sh &&
 ### 2. Post-Setup Configuration
 
 ```bash
+# Install XFCE if Needed (Only for PopOS)
+wget https://raw.githubusercontent.com/saikatm/linux-dots/main/xfce-setup-popos.sh && chmod +x xfce-setup-popos.sh && sudo ./xfce-setup-popos.sh
+
 # Install recommended fonts
 wget https://raw.githubusercontent.com/saikatm/linux-dots/main/fonts-install.sh -O fonts-install.sh && chmod +x fonts-install.sh && sudo ./fonts-install.sh
 
