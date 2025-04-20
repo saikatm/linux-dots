@@ -25,6 +25,7 @@ alias g-s "git status"
 alias g-w "git whatchanged"
 alias clone "git clone --depth 1"
 alias pull "git pull"
+alias lx "lsd -l"
 
 
 
