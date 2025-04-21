@@ -64,6 +64,7 @@ sudo apt install -y \
     xfce4-session \
     xfce4-settings \
     xfce4-whiskermenu-plugin \
+    flameshot \
     thunar || { error_log "Failed to install XFCE packages"; exit 1; }
 
 # Remove some unnecessary applications that might be installed
