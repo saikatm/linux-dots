@@ -452,6 +452,7 @@ packages=(
   "curl"
   "fuse"
   "fuse-libs"
+  "evince"
 )
 
 # Install packages individually for better error handling
@@ -530,7 +531,6 @@ if [ "$flatpak_confirmed" = true ]; then
     "com.brave.Browser:Brave Browser"
     "org.qbittorrent.qBittorrent:qBittorrent"
     "org.libreoffice.LibreOffice:LibreOffice"
-    "org.gnome.Papers:GNOME Papers"
   )
   
   for app_info in "${flatpak_apps[@]}"; do
