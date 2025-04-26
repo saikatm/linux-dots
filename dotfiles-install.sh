@@ -38,13 +38,13 @@ if [[ -d ".config" ]]; then
   fi
   
   echo "Dotfiles are copied!"
-elif [[ -f "config.fish" || -f "wezterm.kua" ]]; then
+elif [[ -f "config.fish" || -f "wezterm.lua" ]]; then
   # Handle individual config files
   [[ -f "config.fish" ]] && copy_file "config.fish" "$HOME/.config/fish"
   
-  if [[ -f "wezterm.kua" ]]; then
-    echo "Found wezterm.kua file. Setting up wezterm configuration..."
-    copy_file "wezterm.kua" "$HOME/.config/wezterm"
+  if [[ -f "wezterm.lua" ]]; then
+    echo "Found wezterm.lua file. Setting up wezterm configuration..."
+    copy_file "wezterm.lua" "$HOME/.config/wezterm"
   fi
   
   # Ensure fish functions directory exists if config.fish was found
@@ -67,4 +67,5 @@ if command -v fish &>/dev/null; then
     echo "Shell change skipped."
   fi
 else
-  echo "Warning: fish shell not found. Please inst
+  echo "Warning: fish shell not found. Please install it first with your package manager."
+fi
