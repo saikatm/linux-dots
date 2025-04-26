@@ -23,6 +23,7 @@ if [[ -d ".config" ]]; then
     ["rofi"]="~/.config/rofi"
     ["kitty"]="~/.config/kitty"
     ["neofetch"]="~/.config/neofetch"
+    ["wezterm"]="~/.config/wezterm"
   )
   
   for src in "${!configs[@]}"; do
@@ -37,14 +38,21 @@ if [[ -d ".config" ]]; then
   fi
   
   echo "Dotfiles are copied!"
-elif [[ -f "config.fish" ]]; then
-  echo "Found single config.fish file. Setting up fish configuration..."
-  fish_config_dir="$HOME/.config/fish"
-  copy_file "config.fish" "${fish_config_dir}"
-  mkdir -p "${fish_config_dir}/functions"
-  echo "Fish configuration is set up!"
+elif [[ -f "config.fish" || -f "wezterm.kua" ]]; then
+  # Handle individual config files
+  [[ -f "config.fish" ]] && copy_file "config.fish" "$HOME/.config/fish"
+  
+  if [[ -f "wezterm.kua" ]]; then
+    echo "Found wezterm.kua file. Setting up wezterm configuration..."
+    copy_file "wezterm.kua" "$HOME/.config/wezterm"
+  fi
+  
+  # Ensure fish functions directory exists if config.fish was found
+  [[ -f "config.fish" ]] && mkdir -p "$HOME/.config/fish/functions"
+  
+  echo "Configuration files are set up!"
 else
-  echo "Error: Neither .config directory nor config.fish file found. Exiting."
+  echo "Error: No configuration files or directories found. Exiting."
   exit 1
 fi
 
@@ -59,5 +67,4 @@ if command -v fish &>/dev/null; then
     echo "Shell change skipped."
   fi
 else
-  echo "Warning: fish shell not found. Please install it first with your package manager."
-fi
+  echo "Warning: fish shell not found. Please inst
