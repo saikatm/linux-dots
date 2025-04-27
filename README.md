@@ -24,6 +24,15 @@ wget https://raw.githubusercontent.com/saikatm/linux-dots/main/fonts-install.sh 
 
 # Dotfiles
 wget https://raw.githubusercontent.com/saikatm/linux-dots/main/dotfiles-install.sh && chmod +x dotfiles-install.sh && sudo ./dotfiles-install.sh
+
+# Veracypt 
+
+sudo dnf copr enable robot/veracrypt -y && sudo dnf install veracrypt -y
+
+ OR
+
+sudo add-apt-repository ppa:unit193/encryption -y && sudo apt update && sudo apt install veracrypt -y
+
 ```
 
 ## Applications
