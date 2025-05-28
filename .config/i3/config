@@ -9,6 +9,9 @@
 # Set modifier key (Alt)
 set $mod Mod1
 
+# Start picom (compositor)
+#exec --no-startup-id picom
+
 # Font configuration
 font pango:JetBrains Mono Nerd Font 10
 
