@@ -6,6 +6,9 @@
  * Configuration For Rofi Version: 1.7.3
  **/
 
+/*---------- Theme ----------*/
+@theme "~/.config/rofi/themes/mocha.rasi"
+
 configuration {
 	/*---------- General setting ----------*/
 	modi: "drun,run,filebrowser,window";
@@ -15,7 +18,7 @@ configuration {
 	scroll-method: 0;
 	normalize-match: true;
 	show-icons: true;
-	icon-theme: "Papirus";
+	icon-theme: "Papirus-Dark";
 	application-fallback-icon: "Adwaita";
 /*	cache-dir: ;*/
 	steal-focus: false;
@@ -79,7 +82,7 @@ configuration {
 
 	/*---------- Misc setting ----------*/
 	terminal: "rofi-sensible-terminal";
-	font: "Mono 12";
+	font: "JetBrainsMono Nerd Font 12";
 	sort: false;
 	threads: 0;
 	click-to-exit: true;
@@ -125,9 +128,9 @@ configuration {
 	kb-mode-complete: "Control+l";
 	kb-row-left: "Control+Page_Up";
 	kb-row-right: "Control+Page_Down";
-	kb-row-up: "Up,Control+p,ISO_Left_Tab";
+	kb-row-up: "Up,Control+p";
 	kb-row-down: "Down,Control+n";
-	kb-row-tab: "Tab";
+	kb-row-tab: "";
 	kb-page-prev: "Page_Up";
 	kb-page-next: "Page_Down";
 	kb-row-first: "Home,KP_Home";

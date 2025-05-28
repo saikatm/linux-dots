@@ -1,0 +1,217 @@
+/**
+ * Catppuccin Mocha Theme for Rofi
+ */
+
+/*---------- Catppuccin Mocha Colors ----------*/
+* {
+    /* Base Colors */
+    base:           #1e1e2e;
+    mantle:         #181825;
+    crust:          #11111b;
+    
+    /* Text Colors */
+    text:           #cdd6f4;
+    subtext0:       #a6adc8;
+    subtext1:       #bac2de;
+    
+    /* Surface Colors */
+    surface0:       #313244;
+    surface1:       #45475a;
+    surface2:       #585b70;
+    
+    /* Overlay Colors */
+    overlay0:       #6c7086;
+    overlay1:       #7f849c;
+    overlay2:       #9399b2;
+    
+    /* Accent Colors */
+    blue:           #89b4fa;
+    lavender:       #b4befe;
+    sapphire:       #74c7ec;
+    sky:            #89dceb;
+    teal:           #94e2d5;
+    green:          #a6e3a1;
+    yellow:         #f9e2af;
+    peach:          #fab387;
+    maroon:         #eba0ac;
+    red:            #f38ba8;
+    mauve:          #cba6f7;
+    pink:           #f5c2e7;
+    flamingo:       #f2cdcd;
+    rosewater:      #f5e0dc;
+    
+    /* Global Properties */
+    background-color:   transparent;
+    text-color:         @text;
+    font:               "JetBrainsMono Nerd Font 12";
+}
+
+/*---------- Main Window ----------*/
+window {
+    location:           center;
+    anchor:             center;
+    fullscreen:         false;
+    width:              800px;
+    x-offset:           0px;
+    y-offset:           0px;
+    
+    background-color:   @base;
+    border:             2px solid;
+    border-color:       @blue;
+    border-radius:      12px;
+    cursor:             "default";
+}
+
+mainbox {
+    enabled:            true;
+    spacing:            10px;
+    margin:             0px;
+    padding:            20px;
+    background-color:   transparent;
+    children:           [ "inputbar", "message", "mode-switcher", "listview" ];
+}
+
+/*---------- Input Bar ----------*/
+inputbar {
+    enabled:            true;
+    spacing:            10px;
+    padding:            15px;
+    border:             0px solid;
+    border-radius:      8px;
+    border-color:       @blue;
+    background-color:   @surface0;
+    text-color:         @text;
+    children:           [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled:            true;
+    expand:             false;
+    str:                "";
+    background-color:   @surface0;
+    text-color:         @blue;
+    vertical-align:     0.5;
+    horizontal-align:   0.0;
+}
+
+entry {
+    enabled:            true;
+    background-color:   @surface0;
+    text-color:         @text;
+    cursor:             text;
+    placeholder:        "Search...";
+    placeholder-color:  @subtext0;
+}
+
+/*---------- Mode Switcher ----------*/
+mode-switcher{
+    enabled:            true;
+    spacing:            10px;
+    background-color:   transparent;
+    text-color:         @text;
+}
+
+button {
+    padding:            12px;
+    border:             0px solid;
+    border-radius:      8px;
+    border-color:       @blue;
+    background-color:   @surface0;
+    text-color:         @subtext1;
+    cursor:             pointer;
+}
+
+button selected {
+    background-color:   @blue;
+    text-color:         @base;
+}
+
+/*---------- List View ----------*/
+listview {
+    enabled:            true;
+    columns:            1;
+    lines:              8;
+    cycle:              true;
+    dynamic:            true;
+    scrollbar:          true;
+    layout:             vertical;
+    reverse:            false;
+    fixed-height:       true;
+    fixed-columns:      true;
+    
+    spacing:            5px;
+    background-color:   transparent;
+    text-color:         @text;
+    cursor:             "default";
+}
+
+scrollbar {
+    handle-width:       5px;
+    handle-color:       @blue;
+    border-radius:      8px;
+    background-color:   @surface1;
+}
+
+/*---------- Elements ----------*/
+element {
+    enabled:            true;
+    spacing:            10px;
+    padding:            8px;
+    border:             0px solid;
+    border-radius:      6px;
+    border-color:       @blue;
+    background-color:   transparent;
+    text-color:         @text;
+    cursor:             pointer;
+}
+
+element normal.normal {
+    background-color:   transparent;
+    text-color:         @text;
+}
+
+element selected.normal {
+    background-color:   @blue;
+    text-color:         @base;
+}
+
+element alternate.normal {
+    background-color:   transparent;
+    text-color:         @text;
+}
+
+element-icon {
+    background-color:   transparent;
+    text-color:         inherit;
+    size:               24px;
+    cursor:             inherit;
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         inherit;
+    highlight:          inherit;
+    cursor:             inherit;
+    vertical-align:     0.5;
+    horizontal-align:   0.0;
+}
+
+/*---------- Message ----------*/
+message {
+    enabled:            true;
+    margin:             0px;
+    padding:            12px;
+    border:             0px solid;
+    border-radius:      8px;
+    border-color:       @blue;
+    background-color:   @surface0;
+    text-color:         @text;
+}
+
+textbox {
+    background-color:   transparent;
+    text-color:         @text;
+    vertical-align:     0.5;
+    horizontal-align:   0.0;
+    highlight:          none;
+}
