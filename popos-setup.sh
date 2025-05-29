@@ -500,6 +500,7 @@ packages=(
   "gnupg"
   "dirmngr"
   "software-properties-common"
+  "copyq"
 )
 
 # Add lsd to packages list if not installing from GitHub
