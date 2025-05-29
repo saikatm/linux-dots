@@ -12,6 +12,9 @@ set $mod Mod1
 # Start picom (compositor)
 #exec --no-startup-id picom
 
+# Start copyQ
+exec --no-startup-id copyq
+
 # Font configuration
 font pango:JetBrains Mono Nerd Font 10
 
