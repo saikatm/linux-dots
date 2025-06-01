@@ -1,5 +1,10 @@
 #################################################################################
-#                            CUSTOM SETTINGS & ADJUSTMENTS                      #
+#                              i3 WINDOW MANAGER CONFIG                         #
+#                            WITH DRACULA COLOR SCHEME                         #
+#################################################################################
+
+#################################################################################
+#                                BASIC SETTINGS                                 #
 #################################################################################
 
 # Set modifier key (Alt)
@@ -8,8 +13,35 @@ set $mod Mod1
 # Font configuration
 font pango:JetBrains Mono Nerd Font 10
 
+# Mouse + modifier for dragging floating windows
+floating_modifier $mod
+
 # Window border styling
 for_window [class=".*"] border pixel 2
+
+#################################################################################
+#                               DRACULA COLORS                                  #
+#################################################################################
+
+# Dracula Color Palette
+set $bg-color            #282a36
+set $inactive-bg-color   #282a36
+set $text-color          #f8f8f2
+set $inactive-text-color #6272a4
+set $urgent-bg-color     #ff5555
+set $indicator-color     #bd93f9
+
+# Window border colors (Dracula theme)
+#                       border             background         text                 indicator          child_border
+client.focused          $indicator-color   $bg-color          $text-color          $indicator-color   $indicator-color
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color   $inactive-bg-color
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color   $inactive-bg-color
+client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          $indicator-color   $urgent-bg-color
+client.placeholder      $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color   $inactive-bg-color
+
+#################################################################################
+#                                 GAPS SETTINGS                                 #
+#################################################################################
 
 # Gaps configuration (requires i3-gaps)
 gaps inner 10
@@ -17,19 +49,27 @@ gaps outer 5
 smart_gaps on
 smart_borders on
 
-# Window-specific rules
-for_window [class="firefox"] move to workspace number 2
-for_window [class="Code"] move to workspace number 3
-for_window [class="discord"] move to workspace number 4, layout tabbed
-for_window [class="Spotify"] move to workspace number 5
-for_window [class="Steam"] move to workspace number 6
-for_window [title="Picture-in-Picture"] sticky enable, floating enable
+# Gaps controls
+bindsym $mod+g gaps inner current plus 5
+bindsym $mod+Shift+g gaps inner current minus 5
+bindsym $mod+Ctrl+g gaps inner current set 0
+
+#################################################################################
+#                               FLOATING SETTINGS                               #
+#################################################################################
+
+# Floating window size constraints
+floating_minimum_size 400 x 300
+floating_maximum_size 1200 x 800
+
+# Generic floating rules
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_role="dialog"] floating enable
 for_window [window_type="dialog"] floating enable
-
-# i3 Window Manager Floating Rules
+for_window [window_type="menu"] floating enable
+for_window [title="Preferences"] floating enable
+for_window [title="Settings"] floating enable
 
 # Firefox floating rules
 for_window [class="firefox" window_role="pop-up"] floating enable
@@ -54,12 +94,9 @@ for_window [class="vlc" title="Simple Preferences"] floating enable
 for_window [class="vlc" title="Advanced Preferences"] floating enable
 
 # File Manager Dialogs
-# Nautilus (GNOME Files)
 for_window [class="nautilus" window_type="dialog"] floating enable
 for_window [class="Nautilus" window_type="dialog"] floating enable
 for_window [class="org.gnome.Nautilus" window_type="dialog"] floating enable
-
-# Thunar (XFCE)
 for_window [class="thunar" window_type="dialog"] floating enable
 for_window [class="Thunar" window_type="dialog"] floating enable
 
@@ -76,73 +113,33 @@ for_window [class="copyq"] floating enable
 for_window [class="CopyQ"] floating enable
 for_window [class="copyq" title="CopyQ"] floating enable
 
-# Additional common floating dialogs
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="bubble"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [window_role="Preferences"] floating enable
-for_window [window_type="dialog"] floating enable
-for_window [window_type="menu"] floating enable
-for_window [title="Preferences"] floating enable
-for_window [title="Settings"] floating enable
+# Picture-in-Picture
+for_window [title="Picture-in-Picture"] sticky enable, floating enable
 
+#################################################################################
+#                            WORKSPACE ASSIGNMENTS                              #
+#################################################################################
 
-# Floating window size constraints
-floating_minimum_size 400 x 300
-floating_maximum_size 1200 x 800
+# Application workspace assignments
+for_window [class="firefox"] move to workspace number 2
+for_window [class="Code"] move to workspace number 3
+for_window [class="discord"] move to workspace number 4, layout tabbed
+for_window [class="Spotify"] move to workspace number 5
+for_window [class="Steam"] move to workspace number 6
 
-# Color scheme for window borders (Catppuccin Mocha)
-client.focused          #89b4fa #1e1e2e #cdd6f4 #89b4fa #89b4fa  # Blue accent for focused
-client.unfocused        #6c7086 #1e1e2e #a6adc8 #6c7086 #6c7086  # Overlay for unfocused
-client.urgent           #f38ba8 #1e1e2e #cdd6f4 #f38ba8 #f38ba8  # Red accent for urgent
+#################################################################################
+#                               KEY BINDINGS                                    #
+#################################################################################
 
-# Custom key bindings
-# Terminal (kitty instead of default)
+# Application launchers
 bindsym $mod+Return exec kitty
-# Application launcher (rofi)
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
-# Window switcher (rofi)
 bindsym $mod+Tab exec rofi -show window
-# Toggle border
-bindsym $mod+b border toggle
-# Show shortcut kets
-bindsym $mod+F1 exec ~/.config/i3/scripts/show_shortcuts.sh
-
-# Gaps controls (if using i3-gaps)
-bindsym $mod+g gaps inner current plus 5
-bindsym $mod+Shift+g gaps inner current minus 5
-bindsym $mod+Ctrl+g gaps inner current set 0
-
-# Custom startup applications
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh     # Polybar status bar
-exec --no-startup-id copyq 										# Start copyQ
-#exec --no-startup-id picom 									# Start picom (compositor)
-
-
-#################################################################################
-#                                DEFAULT SETTINGS                               #
-#################################################################################
-
-# Autostart applications
-exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
-# Notification daemon
-exec --no-startup-id dunst
-
-# Audio controls (PulseAudio)
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# Mouse + modifier for dragging floating windows
-floating_modifier $mod
 
 # Window management
-# Kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+b border toggle
+bindsym $mod+F1 exec ~/.config/i3/scripts/show_shortcuts.sh
 
 # Focus controls
 bindsym $mod+j focus left
@@ -169,30 +166,25 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Window splitting
-# Horizontal split
 bindsym $mod+h split h
-# Vertical split
 bindsym $mod+v split v
 
 # Layout controls
-# Fullscreen toggle
 bindsym $mod+f fullscreen toggle
-# Stacking layout
 bindsym $mod+s layout stacking
-# Tabbed layout
 bindsym $mod+w layout tabbed
-# Toggle split layout
 bindsym $mod+e layout toggle split
 
 # Floating controls
-# Toggle floating
 bindsym $mod+Shift+space floating toggle
-# Focus floating/tiling
 bindsym $mod+space focus mode_toggle
 
 # Container focus
-# Focus parent container
 bindsym $mod+a focus parent
+
+#################################################################################
+#                               WORKSPACES                                      #
+#################################################################################
 
 # Workspace definitions
 set $ws1 "1"
@@ -230,14 +222,30 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+#################################################################################
+#                              SYSTEM CONTROLS                                  #
+#################################################################################
+
 # i3 system controls
-# Reload config
 bindsym $mod+Shift+c reload
-# Restart i3
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# Resize mode
+# Audio controls (PulseAudio)
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Laptop brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+
+#################################################################################
+#                                RESIZE MODE                                    #
+#################################################################################
+
 mode "resize" {
     # Resize with vim-like keys
     bindsym j resize shrink width 10 px or 10 ppt
@@ -258,6 +266,25 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+#################################################################################
+#                              STARTUP APPLICATIONS                             #
+#################################################################################
+
+# Default autostart applications
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+exec --no-startup-id dunst
+
+# Custom startup applications
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/i3/scripts/touchpad.sh
+exec --no-startup-id copyq
+
+#################################################################################
+#                                STATUS BAR                                     #
+#################################################################################
 
 # Status bar (commented out - using polybar instead)
 # bar {
