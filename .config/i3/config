@@ -133,6 +133,7 @@ for_window [class="Steam"] move to workspace number 6
 
 # Application launchers
 bindsym $mod+Return exec kitty
+bindsym $mod+Shift+f exec nautilus
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
 bindsym $mod+Tab exec rofi -show window
 
