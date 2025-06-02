@@ -271,6 +271,9 @@ bindsym $mod+r mode "resize"
 #                              STARTUP APPLICATIONS                             #
 #################################################################################
 
+# xrandr setting to mirro display from laptop
+exec_always xrandr --output HDMI-A-0 --same-as eDP
+
 # Default autostart applications
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
