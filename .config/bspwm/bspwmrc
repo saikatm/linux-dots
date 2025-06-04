@@ -16,10 +16,15 @@ sxhkd &
 (sleep 1 && ~/.config/bspwm/scripts/touchpad.sh) &
 
 # Applications (running in background silently)
-megasync > /dev/null 2>&1 &
-flameshot > /dev/null 2>&1 &
-copyq > /dev/null 2>&1 &
-dunst > /dev/null 2>&1 &
+setsid megasync &
+setsid flameshot &
+setsid dunst &
+copyq dunst &
+
+# megasync > /dev/null 2>&1 &
+# flameshot > /dev/null 2>&1 &
+# copyq > /dev/null 2>&1 &
+# dunst > /dev/null 2>&1 &
 
 # Random wallpaper from folder
 feh --bg-scale --randomize ~/Pictures/wallpapers/* &
@@ -47,8 +52,8 @@ bspc config automatic_scheme longest_side
 bspc config focus_follows_pointer true
 
 # Better pointer behavior
-bspc config pointer_follows_focus    true
-bspc config pointer_follows_monitor  true
+# bspc config pointer_follows_focus    true
+# bspc config pointer_follows_monitor  true
 
 # Click to focus (useful for floating windows)
 bspc config click_to_focus          true
