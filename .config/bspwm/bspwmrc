@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env sh
 
 # ===================================
 # BSPWM Configuration
@@ -12,8 +12,17 @@
 sxhkd &
 
 # Custom scripts and utilities
-~/.config/polybar/launch.sh &
-~/.config/bspwm/scripts/touchpad.sh &
+(sleep 1 && ~/.config/polybar/launch.sh) &
+(sleep 1 && ~/.config/bspwm/scripts/touchpad.sh) &
+
+# Applications (running in background silently)
+megasync > /dev/null 2>&1 &
+flameshot > /dev/null 2>&1 &
+copyq > /dev/null 2>&1 &
+dunst > /dev/null 2>&1 &
+
+# Random wallpaper from folder
+feh --bg-scale --randomize ~/Pictures/wallpapers/* &
 
 # -----------------------------------
 # Monitor Setup
@@ -74,4 +83,4 @@ bspc rule -a google-chrome desktop='^3'
 bspc rule -a MEGAsync state=floating sticky=on
 bspc rule -a megasync state=floating sticky=on
 
-bspc rule -a vlc state=floating
+bspc rule -a vlc state=floating sticky=off

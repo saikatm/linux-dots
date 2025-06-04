@@ -1,1 +1,14 @@
 Xft.dpi: 120
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+
+# Common DPI options you can try:
+# Xft.dpi: 96    # Default DPI for many displays
+# Xft.dpi: 110   # Slightly larger fonts
+# Xft.dpi: 144   # High-DPI / Retina displays
+# Xft.dpi: 160   # Extra large fonts for very high-res screens
+# Xft.dpi: 192   # Ultra-high DPI
+
+# To apply changes instantly, run:
+# xrdb -merge ~/.Xresources

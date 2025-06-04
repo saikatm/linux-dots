@@ -7,19 +7,21 @@ toggle_caffeine() {
         rm "$STATE_FILE"
         xset +dpms
         xset s on
+        notify-send -u low -i "preferences-desktop-screensaver" "Caffeine Disabled" "Screen blanking and power saving re-enabled."
     else
         touch "$STATE_FILE"
         xset -dpms
         xset s off
+        notify-send -u low -i "coffee" "Caffeine Enabled" "Screen will stay awake (DPMS off)."
     fi
 }
 
 get_status() {
     if [ -f "$STATE_FILE" ]; then
-        # Green for active caffeine
-        echo "%{F#50fa7b}  %{F-}"
+        # Green icon for caffeine enabled
+        echo "%{F#50fa7b} %{F-}"
     else
-        # Red for sleep mode 
+        # Purple icon for caffeine disabled (sleep mode)
         echo "%{F#bd93f9}󰅶 %{F-}"
     fi
 }
