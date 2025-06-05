@@ -18,12 +18,12 @@ sxhkd &
 (sleep 1 && ~/.config/polybar/launch.sh) &
 (sleep 1 && ~/.config/bspwm/scripts/touchpad.sh) &
 
-# Applications (running in background silently)
-setsid megasync &
-setsid flameshot &
-setsid dunst &
-setsid copyq &
-setsid nm-apple
+# Applications (running silently in background)
+nohup megasync >/dev/null 2>&1 &
+nohup flameshot >/dev/null 2>&1 &
+nohup dunst >/dev/null 2>&1 &
+nohup parcellite >/dev/null 2>&1 &
+nohup nm-applet >/dev/null 2>&1 &
 
 # megasync > /dev/null 2>&1 &
 # flameshot > /dev/null 2>&1 &

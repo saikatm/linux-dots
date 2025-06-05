@@ -453,7 +453,7 @@ packages=(
   "fuse"
   "fuse-libs"
   "evince"
-  "copyq"
+  "parcellite"
 )
 
 # Install packages individually for better error handling

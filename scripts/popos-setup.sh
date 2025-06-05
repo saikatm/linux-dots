@@ -500,7 +500,7 @@ packages=(
   "gnupg"
   "dirmngr"
   "software-properties-common"
-  "copyq"
+  "parcellite"
 )
 
 # Add lsd to packages list if not installing from GitHub
