@@ -21,7 +21,9 @@ alt + @space
 alt + Escape
 	pkill -USR1 -x sxhkd
 
-
+# Show sxhkd shortcuts help
+alt + F1
+    ~/.config/sxhkd/sxhkd-help.sh
 
 # Most frequently used shortcuts
 alt + shift + f
@@ -58,13 +60,13 @@ alt + shift + {1-9,0}
 alt + super + {q,r}
 	bspc {quit,wm -r}
 
-# kill application
-alt + shift + w
-	bspc node -c
-
-# Close window
+# Normal close (respects locked state)
 alt + shift + q
-	bspc node -k
+    bspc node -c
+
+# Force kill (ignores locked state) - requires extra modifier
+alt + shift + ctrl + q
+    bspc node -k
 
 # Toggle tiled / monocle layout
 alt + m
@@ -100,6 +102,19 @@ alt + shift + space
 
 alt + f
     bspc node -t fullscreen
+
+
+# Toggle locked state
+super + shift + l
+    bspc node -g locked
+
+# Toggle marked state  
+super + ctrl + m
+    bspc node -g marked
+
+; # Close all marked windows
+; super + ctrl + shift + c
+;     bspc node any.marked -c
 
 
 # Set node flags

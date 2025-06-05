@@ -63,7 +63,7 @@ bspc config focus_follows_pointer true
 bspc config click_to_focus          true
 
 # Single monocle mode (hide borders when only one window)
-bspc config single_monocle          false
+bspc config single_monocle          true
 
 # Honor size hints (for terminal applications)
 bspc config honor_size_hints        true
@@ -86,15 +86,13 @@ bspc config bottom_padding 5     # bottom for nicer loook
 # -----------------------------------
 # Window Rules
 # -----------------------------------
-bspc rule -a Todoist desktop='^1' follow=on
-bspc rule -a Firefox desktop='^2' 
-bspc rule -a google-chrome desktop='^3'
+bspc rule -a Todoist state=locked desktop='^1' follow=on
+bspc rule -a Firefox state=locked desktop='^2'
+bspc rule -a google-chrome state=locked desktop='^3'
 
-bspc rule -a MEGAsync state=floating sticky=on
-bspc rule -a megasync state=floating sticky=on
-
+bspc rule -a MEGAsync state=floating sticky=off
+bspc rule -a megasync state=floating sticky=off
 bspc rule -a vlc state=floating sticky=off
-
 
 # Calculator floating rules 
 bspc rule -a Gnome-calculator state=floating
