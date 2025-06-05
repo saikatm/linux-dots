@@ -3,9 +3,9 @@
     monitor = 0
     follow = mouse
     width = 350
-    height = 300
+    height = (0, 300)
     origin = top-right
-    offset = 15x46
+    offset = (15, 46)
     scale = 0
     notification_limit = 5
     

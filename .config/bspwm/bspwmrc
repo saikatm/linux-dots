@@ -19,7 +19,8 @@ sxhkd &
 setsid megasync &
 setsid flameshot &
 setsid dunst &
-copyq dunst &
+setsid copyq &
+setsid nm-apple
 
 # megasync > /dev/null 2>&1 &
 # flameshot > /dev/null 2>&1 &
@@ -74,9 +75,10 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 # Additional appearance settings
-bspc config window_gap 10       # Space between windows
+bspc config window_gap 5       # Space between windows
 bspc config border_width 2      # Border size
-bspc config top_padding 20      # Padding for polybar
+bspc config top_padding 35     # top Padding for polybar
+bspc config bottom_padding 5     # bottom for nicer loook
 
 # -----------------------------------
 # Window Rules
@@ -89,3 +91,12 @@ bspc rule -a MEGAsync state=floating sticky=on
 bspc rule -a megasync state=floating sticky=on
 
 bspc rule -a vlc state=floating sticky=off
+
+
+# Calculator floating rules 
+bspc rule -a Gnome-calculator state=floating
+bspc rule -a gnome-calculator state=floating
+bspc rule -a Calculator state=floating
+bspc rule -a calculator state=floating
+bspc rule -a vlc state=floating
+bspc rule -a copyq state=floating

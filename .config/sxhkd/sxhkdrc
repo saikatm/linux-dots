@@ -33,6 +33,11 @@ alt + shift + b
 alt + shift + n
 	nautilus
 
+# change wallpaper
+alt + w
+    feh --bg-scale --randomize ~/Pictures/wallpapers/*
+
+
 #
 # ────────────────────────────────────────────────────────────
 # bspwm-specific hotkeys
@@ -53,9 +58,13 @@ alt + shift + {1-9,0}
 alt + super + {q,r}
 	bspc {quit,wm -r}
 
-# Close / kill window
-alt + {_,shift + }q
-	bspc node -{c,k}
+# kill application
+alt + shift + w
+	bspc node -c
+
+# Close window
+alt + shift + q
+	bspc node -k
 
 # Toggle tiled / monocle layout
 alt + m
@@ -78,9 +87,20 @@ alt + asciitilde
 	bspc desktop -f last
 
 ## ── Window state / flags ───────────────────────────────────
-# Set window state
-alt + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Set window state - improved keybindings
+alt + t
+    bspc node -t tiled
+
+alt + shift + t
+    bspc node -t pseudo_tiled
+
+alt + shift + space
+    bspc node -t floating
+
+alt + f
+    bspc node -t fullscreen
+
 
 # Set node flags
 alt + ctrl + {m,x,y,z}
@@ -129,18 +149,25 @@ alt + ctrl + shift + space
 ## ── Resize / move ──────────────────────────────────────────
 # Expand window by moving side outward
 
-# Resize windows with alt+shift+r + arrow keys
-alt + shift + r : Left
-    bspc node -z right -20 0 || bspc node -z left -20 0
+# Resize mode for BSPWM (add to sxhkdrc)
 
-alt + shift + r : Right  
-    bspc node -z right 20 0 || bspc node -z left 20 0
+# Enter resize mode
+alt + r
+    ~/.config/bspwm/scripts/resize_mode.sh
 
-alt + shift + r : Up
-    bspc node -z top 0 -20 || bspc node -z bottom 0 -20
+# Direct resize shortcuts (alternative to mode)
+alt + ctrl + {h,j,k,l}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-alt + shift + r : Down
-    bspc node -z bottom 0 20 || bspc node -z top 0 20
+alt + ctrl + shift + {h,j,k,l}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# Arrow key resize
+alt + ctrl + {Left,Down,Up,Right}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+alt + ctrl + shift + {Left,Down,Up,Right}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 
 # Contract window by moving side inward
