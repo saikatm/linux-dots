@@ -15,7 +15,7 @@ alt + Return
 
 # Program launcher
 alt + @space
-	rofi -modi drun -show drun
+	rofi -modi drun,filebrowser,window -show drun
 
 # Reload sxhkd config
 alt + Escape

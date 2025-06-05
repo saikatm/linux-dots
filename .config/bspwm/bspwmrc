@@ -8,6 +8,9 @@
 # Startup Programs
 # -----------------------------------
 
+# Set default cursor
+xsetroot -cursor_name left_ptr
+
 # Hotkey daemon
 sxhkd &
 
