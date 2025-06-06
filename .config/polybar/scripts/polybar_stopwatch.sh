@@ -1,115 +1,63 @@
 #!/bin/bash
 
-# Polybar Stopwatch Module
-# Uses Dracula color scheme with dynamic colors
+# Polybar Stopwatch — Clean Dracula Mode
+STATE="/tmp/polybar_stopwatch_state"
+START="/tmp/polybar_stopwatch_start"
+PAUSE="/tmp/polybar_stopwatch_pause"
+ELAPSED="/tmp/polybar_stopwatch_elapsed"
 
-# State files to track stopwatch
-STATE_FILE="/tmp/polybar_stopwatch_state"
-START_FILE="/tmp/polybar_stopwatch_start"
-PAUSE_FILE="/tmp/polybar_stopwatch_pause"
-ELAPSED_FILE="/tmp/polybar_stopwatch_elapsed"
-
-# Colors from Dracula palette
-BG="#282a36"
-FG="#f8f8f2"
+# Dracula fixed colors
 GREEN="#50fa7b"
-CYAN="#8be9fd"
-YELLOW="#f1fa8c"
 ORANGE="#ffb86c"
-RED="#ff5555"
-PURPLE="#bd93f9"
-PINK="#ff79c6"
+GRAY="#6272a4"
 
-# Function to format time as hh:mm:ss
 format_time() {
-    local total_seconds=$1
-    local hours=$((total_seconds / 3600))
-    local minutes=$(((total_seconds % 3600) / 60))
-    local seconds=$((total_seconds % 60))
-    printf "%02d:%02d:%02d" $hours $minutes $seconds
+    local t=$1
+    printf "%02d:%02d:%02d" $((t/3600)) $(( (t%3600)/60 )) $((t%60))
 }
 
-# Function to get dynamic color based on elapsed time
-get_dynamic_color() {
-    local elapsed=$1
-    local minutes=$((elapsed / 60))
-    
-    if [ $minutes -lt 5 ]; then
-        echo $GREEN
-    elif [ $minutes -lt 15 ]; then
-        echo $CYAN
-    elif [ $minutes -lt 30 ]; then
-        echo $YELLOW
-    elif [ $minutes -lt 60 ]; then
-        echo $ORANGE
-    elif [ $minutes -lt 120 ]; then
-        echo $PINK
-    else
-        echo $RED
-    fi
-}
-
-# Handle click actions
+# Click handling
 case "$1" in
-    "toggle")
-        if [ ! -f "$STATE_FILE" ]; then
-            # Start stopwatch
-            echo "running" > "$STATE_FILE"
-            date +%s > "$START_FILE"
-            echo "0" > "$ELAPSED_FILE"
-            rm -f "$PAUSE_FILE"
-        elif [ -f "$PAUSE_FILE" ]; then
-            # Resume from pause
-            echo "running" > "$STATE_FILE"
-            date +%s > "$START_FILE"
-            rm -f "$PAUSE_FILE"
+    toggle)
+        if [ ! -f "$STATE" ]; then
+            echo running > "$STATE"
+            date +%s > "$START"
+            echo 0 > "$ELAPSED"
+            rm -f "$PAUSE"
+        elif [ -f "$PAUSE" ]; then
+            echo running > "$STATE"
+            date +%s > "$START"
+            rm -f "$PAUSE"
         else
-            # Pause stopwatch
-            echo "paused" > "$STATE_FILE"
-            current_time=$(date +%s)
-            start_time=$(cat "$START_FILE")
-            previous_elapsed=$(cat "$ELAPSED_FILE" 2>/dev/null || echo "0")
-            total_elapsed=$((previous_elapsed + current_time - start_time))
-            echo "$total_elapsed" > "$ELAPSED_FILE"
-            echo "1" > "$PAUSE_FILE"
+            echo paused > "$STATE"
+            now=$(date +%s)
+            start=$(<"$START")
+            prev=$(<"$ELAPSED" 2>/dev/null || echo 0)
+            echo $((prev + now - start)) > "$ELAPSED"
+            touch "$PAUSE"
         fi
         ;;
-    "reset")
-        # Stop and reset everything
-        rm -f "$STATE_FILE" "$START_FILE" "$PAUSE_FILE" "$ELAPSED_FILE"
+    reset)
+        rm -f "$STATE" "$START" "$PAUSE" "$ELAPSED"
         ;;
 esac
 
-# Display stopwatch
-if [ -f "$STATE_FILE" ]; then
-    state=$(cat "$STATE_FILE")
-    
+# Output
+if [ -f "$STATE" ]; then
+    state=$(<"$STATE")
     if [ "$state" = "running" ]; then
-        # Stopwatch is running
-        start_time=$(cat "$START_FILE")
-        current_time=$(date +%s)
-        previous_elapsed=$(cat "$ELAPSED_FILE" 2>/dev/null || echo "0")
-        elapsed=$((previous_elapsed + current_time - start_time))
-        
-        # Get dynamic color
-        color=$(get_dynamic_color $elapsed)
-        
-        # Format and display with running icon
-        formatted_time=$(format_time $elapsed)
-        echo "%{F$color}󱎫 $formatted_time%{F-}"
-        
-    elif [ "$state" = "paused" ]; then
-        # Stopwatch is paused
-        elapsed=$(cat "$ELAPSED_FILE" 2>/dev/null || echo "0")
-        
-        # Get dynamic color
-        color=$(get_dynamic_color $elapsed)
-        
-        # Format and display with paused icon
-        formatted_time=$(format_time $elapsed)
-        echo "%{F$color}󰏤 $formatted_time%{F-}"
+        now=$(date +%s)
+        start=$(<"$START")
+        prev=$(<"$ELAPSED" 2>/dev/null || echo 0)
+        time=$((prev + now - start))
+        icon="󱎫"
+        color="$GREEN"
+    else
+        time=$(<"$ELAPSED" 2>/dev/null || echo 0)
+        icon="󰏤"
+        color="$ORANGE"
     fi
+    echo "%{F$color}$icon $(format_time $time)%{F-}"
 else
-    # Stopwatch is stopped
-    echo "%{F$FG}󱫍 00:00:00%{F-}"
+    echo "%{F$GRAY}󱫍 00:00:00%{F-}"
 fi

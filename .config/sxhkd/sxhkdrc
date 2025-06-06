@@ -19,7 +19,7 @@ alt + @space
 
 # Reload sxhkd config
 alt + Escape
-	pkill -USR1 -x sxhkd
+    pkill -x sxhkd && sxhkd &  # reload sxhkd
 
 # Show sxhkd shortcuts help
 alt + F1
@@ -39,6 +39,9 @@ alt + shift + n
 alt + w
     feh --bg-scale --randomize ~/Pictures/wallpapers/*
 
+# show power menu 2: Super + Delete  
+alt + Delete
+    ~/.config/polybar/scripts/session_menu.sh
 
 #
 # ────────────────────────────────────────────────────────────
@@ -56,9 +59,14 @@ alt + shift + {1-9,0}
 	bspc node -d '^{1-9,10}' --follow
 
 ## ── bspwm control ───────────────────────────────────────────
-# Quit / restart bspwm
-alt + super + {q,r}
-	bspc {quit,wm -r}
+
+# Restart the BSPWM window manager and reload sxhkd to ensure keybindings continue to work
+alt + super + r
+    bspc wm -r; pkill -x sxhkd; sxhkd &
+
+# Quit BSPWM session completely (logs out of the session)
+alt + super + q
+    bspc quit
 
 # Normal close (respects locked state)
 alt + shift + q
