@@ -22,7 +22,7 @@ alt + Escape
     pkill -x sxhkd && sxhkd &  # reload sxhkd
 
 # Show sxhkd shortcuts help
-alt + F1
+alt + F2
     ~/.config/sxhkd/sxhkd-help.sh
 
 # Most frequently used shortcuts
@@ -95,10 +95,6 @@ alt + g
 # Toggle between two windows (Alt+Tab-like) - FIXED
 alt + Tab
 	bspc node -f last
-
-# Alternative: Focus last desktop using backtick (`)
-alt + asciitilde
-	bspc desktop -f last
 
 ## ── Window state / flags ───────────────────────────────────
 
@@ -212,7 +208,6 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
    brightnessctl set 10%-
 
-
-   # Add this temporary test to your config
-alt + x
-    notify-send "Alt key works"
+#todoist quick add 
+alt + a
+    sh -c 'wmctrl -xa todoist || todoist'

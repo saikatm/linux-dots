@@ -56,7 +56,7 @@ elif [[ "$OS" =~ ^(ubuntu|debian|pop)$ ]]; then
     INSTALL_CMD="sudo apt update && sudo apt install -y $PACKAGES"
     
 elif [[ "$OS" == "fedora" ]]; then
-    PACKAGES="bspwm sxhkd polybar feh dunst parcellite NetworkManager-gnome"
+    PACKAGES="bspwm sxhkd polybar feh dunst parcellite NetworkManager-gnome wmctrl"
     if [ "$GDM_INSTALLED" = false ]; then
         PACKAGES="$PACKAGES lightdm lightdm-gtk-greeter"
     fi
