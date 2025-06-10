@@ -56,7 +56,11 @@ alt + {1-9,0}
 
 # Send focused window to desktop (1–10) and follow focus
 alt + shift + {1-9,0}
-	bspc node -d '^{1-9,10}' --follow
+	bspc node -d '^{1-9,10}' 
+
+## use --follow to follow the window to the new workspace.
+# eg bspc node -d '^{1-9,10}' --follow
+
 
 ## ── bspwm control ───────────────────────────────────────────
 
