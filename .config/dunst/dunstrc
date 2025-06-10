@@ -1,4 +1,4 @@
-# Dunst configuration - Catppuccin Mocha theme
+# Dunst configuration - Dracula theme
 [global]
     monitor = 0
     follow = mouse
@@ -22,7 +22,7 @@
     horizontal_padding = 12
     text_icon_padding = 0
     frame_width = 2
-    frame_color = "#89b4fa"
+    frame_color = "#bd93f9"
     gap_size = 6
     separator_color = frame
     sort = yes
@@ -30,7 +30,7 @@
     font = JetBrainsMono Nerd Font 10
     line_height = 0
     markup = full
-    format = "<span size='x-large' font_desc='JetBrainsMono Nerd Font 12' weight='bold' foreground='#cdd6f4'>%s</span>\n%b"
+    format = "<span size='x-large' font_desc='JetBrainsMono Nerd Font 12' weight='bold' foreground='#f8f8f2'>%s</span>\n%b"
     alignment = left
     vertical_alignment = center
     show_age_threshold = 60
@@ -72,54 +72,54 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#1e1e2e"
-    foreground = "#cdd6f4"
-    highlight = "#89b4fa"
-    frame_color = "#313244"
+    background = "#282a36"
+    foreground = "#f8f8f2"
+    highlight = "#bd93f9"
+    frame_color = "#6272a4"
     timeout = 5
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#1e1e2e"
-    foreground = "#cdd6f4"
-    highlight = "#89b4fa"
-    frame_color = "#89b4fa"
+    background = "#282a36"
+    foreground = "#f8f8f2"
+    highlight = "#bd93f9"
+    frame_color = "#bd93f9"
     timeout = 8
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#1e1e2e"
-    foreground = "#cdd6f4"
-    highlight = "#f38ba8"
-    frame_color = "#f38ba8"
+    background = "#282a36"
+    foreground = "#f8f8f2"
+    highlight = "#ff5555"
+    frame_color = "#ff5555"
     timeout = 0
     default_icon = dialog-warning
 
 # Application specific rules
 [spotify]
     appname = Spotify
-    background = "#1e1e2e"
-    foreground = "#a6e3a1"
-    frame_color = "#a6e3a1"
+    background = "#282a36"
+    foreground = "#50fa7b"
+    frame_color = "#50fa7b"
     timeout = 3
 
 [discord]
     appname = discord
-    background = "#1e1e2e"
-    foreground = "#89b4fa"
-    frame_color = "#89b4fa"
+    background = "#282a36"
+    foreground = "#bd93f9"
+    frame_color = "#bd93f9"
     timeout = 5
 
 [volume]
     summary = "Volume*"
-    background = "#1e1e2e"
-    foreground = "#fab387"
-    frame_color = "#fab387"
+    background = "#282a36"
+    foreground = "#ffb86c"
+    frame_color = "#ffb86c"
     timeout = 2
     
 [brightness]
     summary = "Brightness*"
-    background = "#1e1e2e"
-    foreground = "#f9e2af"
-    frame_color = "#f9e2af"
+    background = "#282a36"
+    foreground = "#f1fa8c"
+    frame_color = "#f1fa8c"
     timeout = 2
