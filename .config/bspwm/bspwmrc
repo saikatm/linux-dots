@@ -90,6 +90,7 @@ bspc rule -a google-chrome state=locked desktop='^3'
 bspc rule -a MEGAsync state=floating sticky=off
 bspc rule -a megasync state=floating sticky=off
 bspc rule -a vlc state=floating sticky=off
+bspc rule -a evince state=floating
 
 # Calculator floating rules 
 bspc rule -a Gnome-calculator state=floating
