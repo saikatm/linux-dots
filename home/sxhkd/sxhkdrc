@@ -18,8 +18,9 @@ alt + @space
 	rofi -modi drun,filebrowser,window -show drun
 
 # Reload sxhkd config
-alt + Escape
-    pkill -x sxhkd && sxhkd &  # reload sxhkd
+#Avoid restarting sxhkd frequently inside sxhkd itself, it can cause flickers or glitches.
+# alt + Escape
+#     pkill -x sxhkd && sxhkd &
 
 # Show sxhkd shortcuts help
 alt + F2
@@ -66,7 +67,7 @@ alt + shift + {1-9,0}
 
 # Restart the BSPWM window manager and reload sxhkd to ensure keybindings continue to work
 alt + super + r
-    bspc wm -r; pkill -x sxhkd; sxhkd &
+    bspc wm -r
 
 # Quit BSPWM session completely (logs out of the session)
 alt + super + q
@@ -92,9 +93,13 @@ alt + y
 alt + g
 	bspc node -s biggest.local
 
-# Toggle between two windows (Alt+Tab-like) - FIXED
+# Toggle between previous workspace 
 alt + Tab
-	bspc node -f last
+	bspc desktop -f last
+
+# Toggle between previous windows
+alt + grave
+    bspc desktop -f last
 
 ## ── Window state / flags ───────────────────────────────────
 
