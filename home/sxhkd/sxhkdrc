@@ -1,14 +1,13 @@
 #
-# ────────────────────────────────────────────────────────────
-# wm-independent hotkeys
-# ────────────────────────────────────────────────────────────
+### wm-independent hotkeys ###
 #
 # NOTE: To change the modifier key from 'super' to 'alt':
 # Replace all instances of 'super' with 'alt' throughout this file
 # Example: 'super + Return' becomes 'alt + Return'
 #
 
-## ── User-defined commands ──────────────────────────────────
+### User-defined commands ###
+
 # Terminal emulator
 alt + Return
 	kitty
@@ -44,13 +43,10 @@ alt + w
 alt + Delete
     ~/.config/polybar/scripts/session_menu.sh
 
-#
-# ────────────────────────────────────────────────────────────
-# bspwm-specific hotkeys
-# ────────────────────────────────────────────────────────────
-#
+### bspwm-specific hotkeys ###
 
-## ── Focus/send to desktops ─────────────────────────────────
+### Focus/send to desktops ###
+
 # Focus desktop (1–10)
 alt + {1-9,0}
 	bspc desktop -f '^{1-9,10}'
@@ -62,8 +58,7 @@ alt + shift + {1-9,0}
 ## use --follow to follow the window to the new workspace.
 # eg bspc node -d '^{1-9,10}' --follow
 
-
-## ── bspwm control ───────────────────────────────────────────
+### bspwm control ###
 
 # Restart the BSPWM window manager and reload sxhkd to ensure keybindings continue to work
 alt + super + r
@@ -101,7 +96,7 @@ alt + Tab
 alt + grave
     bspc desktop -f last
 
-## ── Window state / flags ───────────────────────────────────
+### Window state / flags ###
 
 # Set window state - improved keybindings
 alt + t
@@ -116,7 +111,6 @@ alt + shift + space
 alt + f
     bspc node -t fullscreen
 
-
 # Toggle locked state
 super + shift + l
     bspc node -g locked
@@ -129,12 +123,11 @@ super + ctrl + m
 super + ctrl + shift + c
 	bspc node any.marked -c
 
-
 # Set node flags
 alt + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-## ── Focus / swap ───────────────────────────────────────────
+### Focus / swap ###
 
 # Cycle through windows in current desktop
 alt + c
@@ -142,7 +135,6 @@ alt + c
 
 alt + shift + c  
 	bspc node -f prev.local
-
 
 # Focus next/prev desktop
 alt + bracket{left,right}
@@ -154,7 +146,8 @@ alt + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
-## ── Preselect ──────────────────────────────────────────────
+### Preselect ###
+
 # Preselect split direction
 alt + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
@@ -171,18 +164,18 @@ alt + ctrl + {1-9}
 alt + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-## ── Resize / move ──────────────────────────────────────────
+### Resize / move ###
 
-# Enter resize mode
-alt + r
-    ~/.config/bspwm/scripts/resize_mode.sh
+# Enter manual resize mode with script
+# alt + r
+#     ~/.config/bspwm/scripts/resize_mode.sh
 
-; # Window resize with arrow keys
-; alt + ctrl + {Left,Down,Up,Right}
-;     bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+# Window resize with arrow keys
+alt + ctrl + {Left,Down,Up,Right}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-; alt + ctrl + shift + {Left,Down,Up,Right}
-;     bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+alt + ctrl + shift + {Left,Down,Up,Right}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 	
 # Move floating window
 alt + ctrl + {Left,Down,Up,Right}
@@ -200,7 +193,6 @@ alt + ctrl + b
 alt + ctrl + space
     bspc node -t ~floating
 
-
 # Focus windows (just move cursor)
 alt + {h,j,k,l}
 	bspc node -f {west,south,north,east}
@@ -209,6 +201,7 @@ alt + {h,j,k,l}
 alt + shift + {h,j,k,l}
 	bspc node -s {west,south,north,east}
 
+### System controls ###
 
 # Laptop brightness controls
 XF86MonBrightnessUp

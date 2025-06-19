@@ -19,10 +19,10 @@ toggle_caffeine() {
 get_status() {
     if [ -f "$STATE_FILE" ]; then
         # Green icon for caffeine enabled
-        echo "%{F#50fa7b} %{F-}"
+        echo "%{F#50fa7b}󰈈%{F-}"
     else
         # Purple icon for caffeine disabled (sleep mode)
-        echo "%{F#bd93f9}󰅶 %{F-}"
+        echo "%{F#bd93f9}󰅶%{F-}"
     fi
 }
 
